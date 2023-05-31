@@ -1,0 +1,39 @@
+.fab_funct_atc ul {
+    list-style: none;
+    display: none;
+    gap: 10px;
+    padding: 0;
+}
+.fab_funct_atc ul.active{
+  display: flex;
+}
+.fab_funct_atc input, .fab_funct_atc label{
+  cursor:pointer;
+}
+.fab_funct_atc a.swatch_ {
+    width: 30px;
+    height: 20px;
+    border: 1px solid;
+    display: block !important;
+    cursor:pointer;
+}
+a.swatch_red {
+    background: red;
+}
+a.swatch_green{
+  background: green;
+}
+a.swatch_black{
+  background: black;
+}
+a.swatch_pink{
+  background: pink;
+}
+
+
+
+/* form css */
+.test p.hulk-powered-wrapper.text-right {
+    display: none;
+}
+

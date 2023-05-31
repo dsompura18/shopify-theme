@@ -1,0 +1,687 @@
+
+<div class="roulette_wheel_popup page-width">
+  <div class="wheel_popup_btn_close">
+    <button class="popup_btn_close">X</button>
+  </div>
+  <div class="popup_content">
+    <div class="custom_roulette_wheel">
+      <div id="chart"></div>
+      <!-- <div id="question"><h1></h1></div> -->
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+      <div class="step_1 email">
+        <form action="/" method="POST">
+          <input type="email" id="user_email" placeholder="Enter your email">
+          <input type="submit" id="spinallow" value="Submit">
+          <span id="emailErr" style="color:red; display:none;">Invalid Email!</span>
+          <span id="emailEmp" style="color:blue; display:none;">Enter Valid Email!</span>
+          <span id="emailsub" style="color:white; display:none;">Email submitted! Now you can spin </span>
+        </form>
+        <audio id="bg_audio" controls autoplay style="display:none;">
+          <source
+            src="https://cdn.shopify.com/s/files/1/0576/2088/9661/files/eco-technology-145636_mp3cut.net.mp3?v=1681990432"
+            type="audio/mp3"
+          >
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="step_2 pet_info" style="display:none;">
+        <form action="/" method="POST">
+          <div>
+            <label for="pet_name">Pet Name</label>
+            <input type="text" id="pet_name" placeholder="Enter pet name">
+            <p class="err">Please enter valid name!</p>
+          </div>
+          <div>
+            <label for="pet-type">Pet Type</label>
+            <select required class="required" id="pet-type" name="attributes[Pet Type]">
+              <option value="Type1" selected>Type1</option>
+              <option value="Type2">Type2</option>
+              <option value="Type3">Type3</option>
+            </select>
+          </div>
+          <div>
+            <label for="pet_birth">Pet Birth Date</label>
+            <input type="date" id="pet_birth" placeholder="choose Date of Birth">
+          </div>
+          <input type="submit" id="petData_sub" value="Submit">
+          <p class="err">Please Select valid Date!</p>
+        </form>
+      </div>
+    </div>
+    <div class="reward_content">
+      <div class="container_">
+        <h1>Congrats!</h1>
+        <h4>Please copy below code:</h4>
+        <p class="reward_code"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+    body{
+      position:relative;
+    }
+    body.model-open{
+          overflow: hidden;
+    }
+    .container_ {
+      width: 40%;
+      text-align: center;
+  }
+   .roulette_wheel_section {
+      position: fixed;
+      width: 100%;
+      z-index: 99999;
+/*       background: rgb(0 0 0 / 70%); */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+          .roulette_wheel_popup{
+                margin: auto;
+               background: #bebebe;
+              padding: 0%;
+              border: 5px solid #000;
+              border-radius: 5px;
+              position:relative;
+            display:none;
+          }
+          text{
+              font-family:Helvetica, Arial, sans-serif;
+              font-size:11px;
+              pointer-events:none;
+          }
+          #chart{
+      /*         position:absolute; */
+              width:500px;
+              height:500px;
+              top:0;
+              left:0;
+          }
+          #question{
+              position: absolute;
+              width:400px;
+              height:500px;
+              top:0;
+              left:520px;
+          }
+          #question h1{
+              font-size: 50px;
+              font-weight: bold;
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              position: absolute;
+              padding: 0;
+              margin: 0;
+              top:50%;
+              -webkit-transform:translate(0,-50%);
+                      transform:translate(0,-50%);
+          }
+
+         .custom_roulette_wheel{
+           display: flex;
+          align-items: center;
+          padding:3%;
+          justify-content: space-between;
+          box-shadow: 5px 0 100px 0 #251217; 
+         }
+
+          input,select {
+              padding: 5px 10px;
+              font-size: 15px;
+              width: 100%;
+              margin: 5px 0;
+          }
+          #spinallow, #petData_sub{
+            width: 50%;
+            margin: auto;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+            padding: 0 3rem;
+            cursor: pointer;
+            font: inherit;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: rgb(var(--color-button-text));
+            transition: box-shadow var(--duration-short) ease;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: rgba(var(--color-button),var(--alpha-button-background));
+            border-radius: 30px;
+            position: relative;
+          }
+          .custom_roulette_wheel form{
+            display: flex;
+            flex-direction: column;
+      /*       align-items: center; */
+            gap: 10px;
+          }
+          .swingPointer path{
+            animation: swing ease-in-out 0.3s infinite alternate;
+      /*       transform-origin: center -20px; */
+            float:left;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+          }
+          @keyframes swing {
+            0% { transform: rotate(64deg) matrix(1, 0, 0.07, 1, 0, 0);}
+            100% { transform: rotate(64deg) matrix(1, 0, -0.07, 1, 0, 0);}
+          }
+
+         input,select{
+            background-color: rgb(var(--color-background));
+            color: rgb(var(--color-foreground));
+            font-size: 1.6rem;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 2px;
+            height: 4.5rem;
+            min-height: calc(var(--inputs-border-width) * 2);
+            min-width: calc(7rem + (var(--inputs-border-width) * 2));
+            position: relative;
+            border: 0;
+            flex-grow: 1;
+            text-align: left;
+            padding: 1rem;
+            margin: var(--inputs-border-width);
+            transition: box-shadow var(--duration-short) ease;
+          }
+
+          p.err{
+            display:none;
+          }
+          .email span, p.err{
+                transition: 0.5s linear;
+                font-weight:600;
+                text-align:center;
+          }
+
+         .step_1, .step_2{
+           width: 40%;
+           padding: 10px;
+         }
+
+      /*     popup btn */
+          .wheel_popup_btn{
+            position: fixed;
+            right: -3%;
+            top: 50%;
+            z-index: 99999;
+            transform: rotate(-90deg);
+          }
+
+          .popup_btn{
+            padding: 10px 20px;
+          border-radius: 10px 10px 0 0;
+          background: #000;
+          color: #fff;
+          font-size: 15px;
+          border: 0;
+          font-weight: 600;
+          }
+
+    /*       popup close btn */
+      .popup_btn_close{
+        background: transparent;
+        font-size: 20px;
+        border: 0;
+        color: #fff;
+        display: block;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .wheel_popup_btn_close{
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        z-index: 99;
+      }
+
+
+  /*  reward result div    */
+    .popup_content{
+      position:relative;
+    }
+  .reward_content{
+    position: absolute;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, rgba(0, 115, 186,0.5) 0%,rgba(0, 115, 186,1) 67%);
+  /*     background: rgba(0, 115, 186,0.7); */
+      padding: 15px;
+      padding-right:50px;
+      display: none;
+      color: #fff;
+      text-align: left;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+  }
+  .reward_content h1, .reward_content h4,.reward_content p  {
+    color:#fff;
+  }
+
+  .reward_content p.reward_code {
+    display: initial;
+    margin: auto;
+    font-size:18px;
+    padding: 7px 30px;
+}
+  .reward_content p.coupon_code{
+    border: 1px dashed;
+    font-size:16px;
+    cursor: pointer;
+  }
+
+
+
+      @media screen and (max-width: 990px){
+        .roulette_wheel_popup{
+          max-width:90%;
+        }
+      }
+      @media screen and (max-width: 750px){
+        .custom_roulette_wheel{
+            flex-direction: column;
+        }
+        .step_1, .step_2{
+           width: 100%;
+         }
+         .container_ {
+            width: 100%;
+         }
+      }
+</style>
+{% schema %}
+{
+  "name": "roulette-wheel",
+  "class":"roulette_wheel_section",
+  "settings": [],
+  "presets":[
+    {
+      "name": "roulette-wheel"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+<script>
+  
+  
+  
+
+if ($(window).width() > 600){
+  var padding = {top:20, right:40, bottom:0, left:0},
+            w = 500 - padding.left - padding.right,
+            h = 500 - padding.top  - padding.bottom,
+            r = Math.min(w, h)/2,
+            rotation = 0,
+            oldrotation = 0,
+            picked = 100000,
+            oldpick = "",
+            spinResult = "",
+            color = d3.scale.category20();//category20c()
+            //randomNumbers = getRandomNumbers();
+        //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
+}else{
+  var padding = {top:20, right:40, bottom:0, left:0},
+            w = 300 - padding.left - padding.right,
+            h = 300 - padding.top  - padding.bottom,
+            r = Math.min(w, h)/2,
+            rotation = 0,
+            oldrotation = 0,
+            picked = 100000,
+            oldpick = "",
+            spinResult = "",
+            color = d3.scale.category20();//category20c()
+            //randomNumbers = getRandomNumbers();
+        //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
+}
+
+  var data = [
+                    {"label":"10% Off",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
+                    {"label":"Free Shipping",  "value":2,  "question":"What CSS property is used for changing the font?"}, //font-family
+                    {"label":"Almost",  "value":3,  "question":"What CSS property is used for changing the color of text?"}, //color
+                    {"label":"10% Off",  "value":4,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
+                    {"label":"No Luck Today",  "value":5,  "question":"What CSS property is used for changing the size of text?"}, //font-size
+                    {"label":"Next Time",  "value":6,  "question":"What CSS property is used for changing the color of text?"}, //color
+                    {"label":"5% Off",  "value":7,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
+                    {"label":"Almost",  "value":8,  "question":"What CSS property is used for changing the color of text?"}, //color
+                    {"label":"10% Off",  "value":9,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
+                    {"label":"Free Shipping",  "value":10,  "question":"What CSS property is used for changing the font?"} //font-family 
+       ];
+        var svg = d3.select('#chart')
+            .attr("id","strips")
+            .append("svg")
+            .data([data])
+            .attr("width",  w + padding.left + padding.right)
+            .attr("height", h + padding.top + padding.bottom);
+        var container = svg.append("g")
+            .attr("class", "chartholder")
+            .attr("transform", "translate(" + (w/2 + padding.left) + "," + (h/2 + padding.top) + ")");
+        var vis = container
+            .append("g");
+            
+        var pie = d3.layout.pie().sort(null).value(function(d){return 1;});
+        // declare an arc generator function
+        var arc = d3.svg.arc().outerRadius(r);
+        // select paths, use arc generator to draw
+        var arcs = vis.selectAll("g.slice")
+            .data(pie)
+            .enter()
+            .append("g")
+            .attr("class", "slice");
+            
+        arcs.append("path")
+            .attr("fill", function(d, i){ return color(i); })
+            .attr("d", function (d) { return arc(d); });
+        // add the text
+        arcs.append("text").attr("transform", function(d){
+                d.innerRadius = 0;
+                d.outerRadius = r;
+                d.angle = (d.startAngle + d.endAngle)/2;
+                return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius -10) +")";
+            })
+            .attr("text-anchor", "end")
+            .text( function(d, i) {
+                return data[i].label;
+            });
+
+      
+  
+  $('#user_email').bind('change keypress keydown keyup',function(){
+    if($(this).val() !== ""){
+      var email = $(this).val();
+      IsEmail(email);
+    }else{
+      $('#emailEmp').show();
+      $('#emailErr').hide();
+      $('#spinallow').removeAttr("disabled");
+      container.on("click", null);
+    }  
+  });
+  
+    $('#spinallow, #petData_sub').click(function(){
+      return false;
+      
+      console.log($('#user_email').val());
+    });  
+
+  
+  $('#petData_sub').click(function(){
+     couponCode();
+    
+     if($('#pet_name').val() === "" || $('#pet_name').val() === " "){
+        alert("kindly enter all details of your pet!");
+     }else if($('#pet_birth').val() === "" || $('#pet_birth').val() === " "){
+       alert("kindly enter all details of your pet!");
+     }else
+     {
+       // $(this).after(`<span>Congrets You win ${spinResult}</span>`);
+       if($.cookie("spin") !== undefined){
+         $.cookie("reward", 'true', { expires : 10 });
+         $('.reward_content').css("display","flex");
+         if( $.cookie("Coupon")!== undefined){
+           var init = $.cookie("Coupon")
+           console.log(init);
+           $('.reward_content p.reward_code').html(`${init}`);
+         }
+       }
+    
+     }
+
+   // console.log($('#pet_name').val());
+   // console.log($('#pet-type').val());
+   // console.log($('#pet_birth').val()); 
+   // console.log(spinResult); 
+   
+});
+  
+    function IsEmail(email) {
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if (!regex.test(email)) {
+                       // alert("invalid");
+                   $('#emailEmp').hide();
+                  $('#emailsub').hide();
+                   $('#emailErr').show();
+                   $('#spinallow').attr("disabled","disabled");
+                   container.on("click", null);
+                }
+                else {
+                   // alert("valid");
+                   $('#emailEmp').hide();
+                   $('#emailErr').hide();
+                   $('#spinallow').removeAttr("disabled");
+                   // container.on("click", spin);
+                   $('#spinallow').click(function(){
+                      if($.cookie("spin") === undefined){
+                        container.on("click", spin);
+                      }
+                      $('#emailsub').show();
+                      console.log($('#user_email').val());
+                   });  
+                }
+        }
+
+
+      
+
+  
+        function spin(d){
+
+          // Set a spin cookie
+            $.cookie("spin", 'true', { expires : 10 });
+          
+          // email text hide 
+             $('#emailsub').hide();
+  // alert("start");
+          
+          // audio autoplay during wheel rotate
+          var sound = document.getElementById("bg_audio");
+          sound.play();
+
+          // arrow swing start during rotation
+          $('.pointer').addClass('swingPointer');
+          
+        //   // audio file
+        // playSound(this,"https://cdn.shopify.com/s/files/1/0576/2088/9661/files/eco-technology-145636_mp3cut.net.mp3?v=1681990432");
+
+          
+            container.on("click", null);
+            //all slices have been seen, all done
+            console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
+            if(oldpick.length == data.length){
+                console.log("done");
+                container.on("click", null);
+                return;
+            }
+            var  ps       = 360/data.length,
+                 pieslice = Math.round(1440/data.length),
+                 rng      = Math.floor((Math.random() * 3440) + 960);
+                
+            rotation = (Math.round(rng / ps) * ps);
+          // rotation = 10000;
+            
+            picked = Math.round(data.length - (rotation % 360)/ps);
+            picked = picked >= data.length ? (picked % data.length) : picked;
+            if(oldpick.indexOf(picked) !== -1){
+                d3.select(this).call(spin);
+                return;
+            } else {
+                // oldpick.push(picked); 
+            }
+            rotation += 64 - Math.round(ps/2);
+            vis.transition()
+                .duration(10000)
+                .attrTween("transform", rotTween)
+                .each("end", function(){
+                    //mark question as seen
+                    // d3.select(".slice:nth-child(" + (picked + 1) + ") path")
+                    //     .attr("fill", "#111");
+                    //populate question
+                    d3.select("#question h1")
+                        .text(data[picked].question);
+                    oldrotation = rotation;
+                  var t = d3.select(".slice:nth-child(" + (picked + 1) + ") text").text();
+                  spinResult = t;
+                  sound.pause();
+                  $.cookie("Coupon", `${spinResult}`, { expires : 10 });
+
+                    // arrow swing stop after rotation
+                    $('.pointer').removeClass('swingPointer');
+                  
+                  // alert(`Congets! you win ${spinResult}`);
+              
+                    /* Get the result value from object "data" */
+                    console.log(data[picked].value)
+              
+                    /* Comment the below line for restrict spin to sngle time */
+                  if($.cookie("spin") === undefined){
+                    container.on("click", spin);
+                  }
+                    setTimeout(function(){
+                      $('.step_1').hide();
+                      $('.step_2').show();
+                    },500);
+                });
+        }
+        //make arrow
+        svg.append("g")
+            .attr('class','pointer')
+            .attr("transform", "translate(450,70)")
+              .append("path")
+            .attr("d", "M43.5,70.5c-0.9,1.1-2.1,1.8-3.5,2.1c-3.5,0-9.3-9.3-13.3-17.3 c-5.2-10.5-8.6-20.8-8.6-26.4c0-12.1,9.8-21.8,21.8-21.8s21.8,9.8,21.8,21.8l0,0c0,4.7-2.4,12.9-6.5,21.9 C51.5,59.5,46.9,67.1,43.5,70.5z M35.4,22.8c-2.6,2.6-2.6,6.7,0,9.3c2.6,2.6,6.7,2.6,9.3,0s2.6-6.7,0-9.3S37.9,20.3,35.4,22.8 C35.4,22.8,35.4,22.8,35.4,22.8L35.4,22.8z")
+            .style({"fill":"black","transform": "rotate(64deg)"});
+        //draw spin circle
+        container.append("circle")
+            .attr("cx", 0)
+            .attr("cy", 0)
+            .attr("r", 60)
+            .style({"fill":"#000","cursor":"pointer"});
+        //spin text
+        container.append("image")
+            .attr("x", -50)
+            .attr("y", -10)
+            .attr('href',"https://cdn.shopify.com/s/files/1/0576/2088/9661/files/logo_57ab0be0-2834-4dbb-8d0f-3f49563fe4dd.webp?v=1682075226")
+            .style({"font-weight":"bold", "width":"100px"});
+        
+        
+        function rotTween(to) {
+          var i = d3.interpolate(oldrotation % 360, rotation);
+          return function(t) {
+            return "rotate(" + i(t) + ")";
+          };
+        }
+        
+        
+        function getRandomNumbers(){
+            var array = new Uint16Array(1000);
+            var scale = d3.scale.linear().range([1760, 3440]).domain([0, 100000]);
+            if(window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function"){
+                window.crypto.getRandomValues(array);
+                console.log("works");
+            } else {
+                //no support for crypto, get crappy random numbers
+                for(var i=0; i < 1000; i++){
+                    array[i] = Math.floor(Math.random() * 100000) + 1;
+                }
+            }
+            return array;
+        }
+
+  // jQuery for change color of wheel strips
+       $('g.slice:nth-child(odd) path').css({ fill: '#000000'});
+       $('g.slice:nth-child(even) path').css({ fill: '#0073ba'});
+       $('g.slice text').css({ fill: '#ffffff'});
+
+
+  // jQuery for lock future date of date picker
+  // $(function() {
+  //   $( "#pet_birth" ).datepicker({  maxDate: 0 });
+  // });
+  //  $('#pet_birth').datepicker({
+  //       format: "dd/mm/yyyy",
+  //       autoclose: true,
+  //       orientation: "top",
+  //       endDate: "today"
+
+  // });
+  $(function(){
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+
+    var maxDate = year + '-' + month + '-' + day;    
+    $('#pet_birth').attr('max', maxDate);
+});
+
+if ($(window).width() < 600){
+  $('g.chartholder circle').attr('r',40);
+  $('g.chartholder image').attr('x',-25).css("width","50px");
+  $('g.pointer').attr('transform','translate(280,50)');
+}
+
+if($.cookie("reward") !== undefined){
+  $('.reward_content').css("display","flex");
+}  
+
+  // popup hide and show on click 
+  $('.popup_btn').click(function(){
+      $('.roulette_wheel_popup').show();
+      $('body').addClass('model-open');
+  });
+  $('.popup_btn_close').click(function(){
+    $('.roulette_wheel_popup').hide();
+     $('body').removeClass('model-open');
+  });
+
+
+couponCode();
+  
+function couponCode(){  
+  // coupon code spin
+  switch ($.cookie("Coupon")) {
+     case "Free Shipping":
+      $('.reward_code').addClass('coupon_code');
+      $('.reward_code').html('Freeship'); 
+      break;
+    case "Almost":
+      $('.container_ h4').hide();
+      $('.reward_content h1').html('Almost');
+      $('.reward_code').html('Sorry! better luck next time! ');
+      break;
+    case "10% Off":
+      $('.reward_code').addClass('coupon_code');
+      $('.reward_code').html('10OFF');
+      break;
+    case "5% Off":
+      $('.reward_code').addClass('coupon_code');
+      $('.reward_code').html('5OFF');
+      break;
+    case "No Luck Today":
+      $('.container_ h4').hide();
+      $('.reward_content h1').html('No Luck Today');
+      $('.reward_code').html('Sorry! better luck next time! ');
+      break;  
+    case "Next Time":
+      $('.container_ h4').hide();
+      $('.reward_content h1').html('Next Time');
+      $('.reward_code').html('Sorry! better luck next time! ');  
+  }  
+}
+
+</script>

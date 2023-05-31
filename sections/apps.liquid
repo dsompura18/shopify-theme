@@ -1,0 +1,52 @@
+<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+  {%- for block in section.blocks -%}
+  <div class="test">
+    {% render block %}
+    <button onclick="myFunction()">test</button>
+  </div>  
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.apps.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.apps.settings.include_margins.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+// function myFunction() {
+//   var iframe = document.getElementById("frame_E9vsvWZmfJpdTxYdFMjyIA");
+//   var elmnt = iframe.contentWindow.document.getElementByClassName("hulk-powered-wrapper")[0];
+//   elmnt.style.display = "none";
+// }
+  $("#frame_E9vsvWZmfJpdTxYdFMjyIA").contents().find(".hulk-powered-wrapper").hide();
+</script>
+<style>
+  /* form css */
+  div#wizard-validation-form {
+      background: green;
+  }
+  .hulk-powered-wrapper {
+      display: none !important;
+  }
+</style>
