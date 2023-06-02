@@ -152,6 +152,7 @@
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/11.webp",
         "video_url": "https:\/\/youtu.be\/b3ootXSAaqE",
         "description": "",
         "full_width": false,
