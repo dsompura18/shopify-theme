@@ -1,0 +1,16 @@
+git command list:
+
+for initiate git - git init
+for go on branch - git checkout (branch name)
+for add changes - git add .
+for commit with message - git commit -m (message)
+for push code in main - git push origin (origin name)
+for intialize branch first time - git checkout -b (branch name)
+for pull changes from branch - git pull origin (branch name)
+for merge changes - git merge (branch name where you merge changes)
+
+
+
+*Instruction*
+1. always pull of main branch before push changes
+2. 
