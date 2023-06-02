@@ -158,7 +158,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/22_ed4daf0e-ad90-4339-a12b-9538954f9441.webp",
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>It only for test.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -191,7 +191,7 @@
     "main",
     "intro",
     "b7f97c4b-e189-4f12-b5fc-716bf2a6e972",
-    "625b5f7d-5532-49da-8de7-3baf2eee552b"
+    "625b5f7d-5532-49da-8de7-3baf2eee552b",
     "b7f97c4b-e189-4f12-b5fc-716bf2a6e972",
     "3d82b755-2fa0-4ce2-9111-d247fc5f6b14"
   ]
