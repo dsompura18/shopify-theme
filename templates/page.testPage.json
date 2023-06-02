@@ -9,6 +9,34 @@
     },
     "intro": {
       "type": "image-with-text",
+      "blocks": {
+        "44c57965-aab1-4f1c-a97c-908289e8e1b3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "ae2572bc-531f-4fba-bc0e-6a5507a0629b": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "b6c540e3-aab0-465c-a950-ff8baa3d44de": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "44c57965-aab1-4f1c-a97c-908289e8e1b3",
+        "ae2572bc-531f-4fba-bc0e-6a5507a0629b",
+        "b6c540e3-aab0-465c-a950-ff8baa3d44de"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/aboutcolour.jpg",
         "height": "adapt",
