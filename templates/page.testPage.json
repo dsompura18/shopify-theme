@@ -130,48 +130,6 @@
         "padding_bottom": 36
       }
     },
-    "45cb132f-6a1e-46da-9eeb-7e007ef8fe25": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15209634136125__45cb132f-6a1e-46da-9eeb-7e007ef8fe25-16856920679dedae81-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--15209634136125__45cb132f-6a1e-46da-9eeb-7e007ef8fe25-16856920679dedae81-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "template--15209634136125__45cb132f-6a1e-46da-9eeb-7e007ef8fe25-16856920679dedae81-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15209634136125__45cb132f-6a1e-46da-9eeb-7e007ef8fe25-16856920679dedae81-0",
-        "template--15209634136125__45cb132f-6a1e-46da-9eeb-7e007ef8fe25-16856920679dedae81-1",
-        "template--15209634136125__45cb132f-6a1e-46da-9eeb-7e007ef8fe25-16856920679dedae81-2"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "d7b459df-a824-4161-8b4e-850cbcaea2c4": {
       "type": "video",
       "settings": {
@@ -192,7 +150,6 @@
     "intro",
     "b7f97c4b-e189-4f12-b5fc-716bf2a6e972",
     "625b5f7d-5532-49da-8de7-3baf2eee552b",
-    "45cb132f-6a1e-46da-9eeb-7e007ef8fe25",
     "d7b459df-a824-4161-8b4e-850cbcaea2c4"
   ]
 }
