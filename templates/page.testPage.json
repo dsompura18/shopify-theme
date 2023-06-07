@@ -172,16 +172,6 @@
         "padding_bottom": 52
       }
     },
-    "de92e0a6-6831-4d1a-9fca-d79e7f9e03de": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "d7b459df-a824-4161-8b4e-850cbcaea2c4": {
       "type": "video",
       "settings": {
@@ -203,7 +193,6 @@
     "b7f97c4b-e189-4f12-b5fc-716bf2a6e972",
     "625b5f7d-5532-49da-8de7-3baf2eee552b",
     "45cb132f-6a1e-46da-9eeb-7e007ef8fe25",
-    "de92e0a6-6831-4d1a-9fca-d79e7f9e03de",
     "d7b459df-a824-4161-8b4e-850cbcaea2c4"
   ]
 }
