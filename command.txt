@@ -13,3 +13,4 @@ for merge changes - git merge (branch name which you merge changes)
 
 *Instruction*
 1. always pull of main branch before push changes
+2. whenever change done from both side always first add change and commit. after this pull branch code and then push it in branch. 
