@@ -130,8 +130,14 @@
               {{ real_count }}
             {% endif %}
       {% endfor %}  
-      {{ collection.products }}
+
       {%- paginate collection.products by section.settings.products_per_page -%}
+          {%- for product in collection.products -%}
+            {% if product.featured_image == blank %}
+              {% assign real_count = product.length %}
+              {{ real_count }}
+            {% endif %}
+      {% endfor %}  
         {{ real_count }}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
