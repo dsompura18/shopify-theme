@@ -152,7 +152,9 @@
               "
             >
               {%- for product in collection.products -%}
-    
+    {% if product.featured_image == blank %}
+      {% break %}
+      {%else %}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
@@ -170,7 +172,7 @@
                     section_id: section.id
                   %}
                 </li>
-
+  {% endif %}
               {%- endfor -%}
             </ul>
 
