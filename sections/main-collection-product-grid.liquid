@@ -126,7 +126,7 @@
     <div class="product-grid-container" id="ProductGridContainer">
       {%- for product in collection.products -%}
             {% if product.featured_image == blank %}
-              {% assign real_count = product.featured_image.size %}
+              {% assign real_count = product.size %}
               {{ real_count }}
             {% endif %}
       {% endfor %}  
