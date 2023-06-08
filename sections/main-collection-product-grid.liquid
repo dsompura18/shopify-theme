@@ -73,7 +73,7 @@
         <div class="product-count-vertical light" role="status">
           <h2 class="product-count__text text-body">
             <span id="ProductCountDesktop">
-    {% comment %}
+            {% comment %}
               {%- if collection.results_count -%}
                 {{
                   'templates.search.results_with_count'
@@ -87,7 +87,7 @@
                   | t: product_count: collection.products_count, count: collection.all_products_count
                 }}
               {%- endif -%}
-     {% endcomment %}
+           {% endcomment %}
             </span>
           </h2>
           <div class="loading-overlay__spinner">
