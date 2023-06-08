@@ -131,12 +131,6 @@
             {% endif %}
       {% endfor %}  
 
-         {%- for product in collection.products -%}
-            {% if product.featured_image == blank %}
-              {% assign real_count = product.length %}
-              {{ real_count }}
-            {% endif %}
-      {% endfor %}  
       {%- paginate collection.products by section.settings.products_per_page -%}
 
         {%- if collection.products.size == 0 -%}
