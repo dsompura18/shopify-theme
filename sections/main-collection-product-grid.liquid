@@ -157,7 +157,7 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-<!--                  {% if product.featured_media != blank %} -->
+
                 <li class="grid__item">
                   {% render 'card-product',
                     card_product: product,
@@ -170,8 +170,7 @@
                     section_id: section.id
                   %}
                 </li>
-<!--                {% else %}
-               {% endif %} -->
+
               {%- endfor -%}
             </ul>
 
