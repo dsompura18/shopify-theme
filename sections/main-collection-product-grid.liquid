@@ -130,6 +130,7 @@
               {{ real_count }}
             {% endif %}
       {% endfor %}  
+      {{ collection.products }}
       {%- paginate collection.products by section.settings.products_per_page -%}
         {{ real_count }}
         {%- if collection.products.size == 0 -%}
