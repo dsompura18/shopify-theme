@@ -124,12 +124,12 @@
     {%- endif -%}
 
     <div class="product-grid-container" id="ProductGridContainer">
-      {%- paginate product by collection.products -%}
+      {%- for product in collection.products -%}
             {% if product.featured_image == blank %}
-              {% assign real_count = product.size %}
+              {% assign real_count = product.length %}
               {{ real_count }}
             {% endif %}
-      {% endpaginate %}  
+      {% endfor %}  
       {%- paginate collection.products by section.settings.products_per_page -%}
         {{ real_count }}
         {%- if collection.products.size == 0 -%}
