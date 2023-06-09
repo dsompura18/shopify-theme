@@ -181,9 +181,17 @@
               {%- endfor -%}
             </ul>
 
-<!--             {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
-            {%- endif -%} -->
+            {% comment %}
+              {%- if paginate.pages > 1 -%}
+                {% render 'pagination', paginate: paginate, anchor: '' %}
+              {%- endif -%}
+            {% endcomment %}
+            <ul>
+              {% for product in collection.products %}
+                <li {% if forloop.index > 8 %}style="display: none;"{% endif %}>product</li>
+              {% endfor %}
+            </ul>
+            <a class="showmore">show more</a>
           </div>
         {%- endif -%}
       {%- endpaginate -%}
