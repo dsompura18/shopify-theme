@@ -1,23 +1,26 @@
 <div class="Heading">
-  <h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="Title">Sepecial Offers</h3>
+  <h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="Title">{{section.settings.main_header}}</h3>
 </div>
 <div class="section_main">
   <div class="left_one">
-    <h3 class="heading"></h3>
-    <p class="title"></p>
-    <div class="timer"></div>
+    <h3 class="heading">{{section.settings.left_header}}</h3>
+    <p class="title">{{section.settings.left_subtitle}}</p>
+    <div class="timer">{{section.settings.datepicker}}</div>
   </div>
   <div class="right_one">
+    {% assign  colle = section.settings.pr_collection %}
+    {%for pr in colle%}
     <div class="image_grid">
       <div class="pr_img">
-        <img src="" alt="">
+        <img src="{{pr.featured_img | img_url: 'master'}}" alt="">
       </div>
-      <div class="pr_title"></div>
-      <div class="pr_price"></div>
+      <div class="pr_title">{{pr.title}}</div>
+      <div class="pr_price">{{pr.price | money}}</div>
       <div class="pr_buy_btn">
-        <button></button>
+        <button class="btn buy_now_btn">Buy Now</button>
       </div>
     </div>
+    {%endfor%}
   </div>
 
 </div>
