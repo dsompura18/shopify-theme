@@ -188,6 +188,11 @@
     "6cebb624-b2fe-4510-a67d-9334b47dfedf": {
       "type": "special-offer",
       "settings": {
+        "main_header": "Heading",
+        "left_header": "Main Title",
+        "left_subtitle": "Sub-Title",
+        "datepicker": "01\/01\/2023",
+        "pr_collection": "collection-one"
       }
     }
   },
