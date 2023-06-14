@@ -12,7 +12,7 @@
     {%for pr in colle%}
     <div class="image_grid">
       <div class="pr_img">
-        <img src="{{pr.featured_img | img_url: 'master'}}" alt="">
+        <img src="{{pr.featured_image | img_url: 'master'}}" alt="">
       </div>
       <div class="pr_title">{{pr.title}}</div>
       <div class="pr_price">{{pr.price | money}}</div>
@@ -22,7 +22,6 @@
     </div>
     {%endfor%}
   </div>
-
 </div>
 
 {% schema %}
