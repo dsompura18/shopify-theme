@@ -1,14 +1,23 @@
 <div class="Heading">
   <h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="Title">Sepecial Offers</h3>
 </div>
-< class="section_main">
+<div class="section_main">
   <div class="left_one">
     <h3 class="heading"></h3>
     <p class="title"></p>
     <div class="timer"></div>
   </div>
   <div class="right_one">
-
+    <div class="image_grid">
+      <div class="pr_img">
+        <img src="" alt="">
+      </div>
+      <div class="pr_title"></div>
+      <div class="pr_price"></div>
+      <div class="pr_buy_btn">
+        <button></button>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -16,7 +25,45 @@
 {% schema %}
   {
     "name": "Special Offer",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_header",
+        "label": "Heading",
+        "default": "Heading"
+      },
+      {
+        "type":"header",
+        "content": "Countdown section"
+      },
+      {
+        "type": "text",
+        "id": "left_header",
+        "label": "Heading",
+        "default": "Main Title"
+      },
+      {
+        "type": "text",
+        "id": "left_subtitle",
+        "label": "Sub-heading",
+        "default": "Sub-Title"
+      },
+      {
+        "type": "text",
+        "id": "datepicker",
+        "label": "Offer Last Date(dd/mm/yyyy)",
+        "default": "01/01/2020"
+      },
+      {
+        "type":"header",
+        "content": "Collection section"
+      },
+      {
+        "type": "collection",
+        "id": "pr_collection",
+        "label": "Collection"
+      }
+    ],
     "presets": [
       {
         "name":"Special Offer"
