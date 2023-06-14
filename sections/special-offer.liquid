@@ -8,7 +8,7 @@
     <div class="timer">{{section.settings.datepicker}}</div>
   </div>
   <div class="right_one">
-    {% assign  colle = section.settings.pr_collection %}
+    {% assign  colle = section.settings.pr_collection.products %}
     {%for pr in colle%}
     <div class="image_grid">
       <div class="pr_img">
