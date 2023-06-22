@@ -2,6 +2,9 @@
 
 {%- form 'create_customer', novalidate: 'novalidate' -%}
 <div class="field">
+   <label for="nickname">
+    Your Nickname
+  </label>
   <input
     type="text"
     name="customer[note][nickname]"
@@ -9,12 +12,12 @@
     autocomplete="given-name"
     placeholder="Nickname"
   >
-  <label for="nickname">
-    Your Nickname
-  </label>
 </div>
 
 <div class="field">
+   <label for="Contact">
+    Contact Number
+  </label>
   <input
     type="tel"
     name="customer[note][mobile]"
@@ -22,9 +25,6 @@
     autocomplete="given-name"
     placeholder="contact number"
   >
-  <label for="Contact">
-    Contact Number
-  </label>
 </div>
 <button>
   {{ 'customer.register.submit' | t }}
