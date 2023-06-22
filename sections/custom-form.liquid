@@ -1,6 +1,6 @@
 <div class="container" style="max-width:800px; margin:auto;">
 
-{%- form 'update_customer', novalidate: 'novalidate' -%}
+<form method="post">
 <div class="field">
    <label for="nickname">
     Your Nickname
@@ -30,7 +30,7 @@
   {{ 'customer.register.submit' | t }}
 </button>
 
-{%- endform -%}
+</form>
 </div>
 <style>
   .custom_form .field:after{
