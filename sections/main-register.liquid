@@ -110,11 +110,12 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
-
-    <input type="date" id="birthdate" name="customer[date]" label="Birth date" />  
-    <label for="birthdate">
-        Birth Date
-    </label>        
+    <div class="field">
+      <input type="date" id="birthdate" name="customer[date]" label="Birth date" />  
+      <label for="birthdate">
+          Birth Date
+      </label>  
+    </div>  
     <div class="field">
       <input
         type="password"
