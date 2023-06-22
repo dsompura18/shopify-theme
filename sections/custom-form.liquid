@@ -32,11 +32,16 @@
 
 {%- endform -%}
 </div>
-
+<style>
+  .custom_form .field:after{
+    box-shadow: unset;
+  }
+</style>
   
 {% schema %}
   {
     "name": "Custom Form data",
+    "class":"custom_form",
     "settings": []
   }
 {% endschema %}
