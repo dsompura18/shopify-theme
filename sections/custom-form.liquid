@@ -1,3 +1,18 @@
+{%- form 'create_customer', novalidate: 'novalidate' -%}
+<div class="field">
+  <input
+    type="text"
+    name="customer[note][nickname]"
+    id="nickname"
+    autocomplete="given-name"
+    placeholder="{{ 'customer.register.first_name' | t }}"
+  >
+  <label for="nickname">
+    Your Nickname
+  </label>
+</div>
+
+{%- endform -%}
 {% schema %}
   {
     "name": "Custom Form data",
