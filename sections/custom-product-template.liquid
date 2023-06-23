@@ -2103,3 +2103,51 @@
   ]
 }
 {% endschema %}
+
+<style>
+.accordion-container .accordion-wrapper {
+  margin-bottom: 10px;
+}
+.accordion-container .accordion.accordion-Back {
+    cursor: pointer;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    position: relative;
+}  
+.accordion-container .selected-swatch.swatch-Back {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-size: 50px 40px;
+    background-color: #eee;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-image: url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698);
+    background-position: center;
+}
+.accordion-container .coverage-title {
+    display: inline-block;
+    position: relative;
+}
+.accordion-container .packQtyContainer {
+    position: absolute;
+    margin-left: 56px;
+    top: 36px;
+}
+.accordion-container .utils-wrapper {
+    display: inline-block;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}  
+</style>
