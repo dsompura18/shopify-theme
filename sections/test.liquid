@@ -1,7 +1,31 @@
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [],
+    "blocks":[
+      {
+        "type":"text",
+        "name":"tile",
+        "settings":[
+            {
+              "type":"text",
+              "id":"tet_",
+              "label":"Text"
+            }
+        ]
+      },
+      {
+        "type":"accodion",
+        "name":"Feature Part",
+        "settings":[
+          {
+            "type":"text",
+            "id":"part_title",
+            "label":"Title"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
 
