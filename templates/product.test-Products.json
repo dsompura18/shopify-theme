@@ -55,10 +55,16 @@
             "text_style": "body"
           }
         },
-        "afcc1768-34bb-4504-ae55-857bcf1bc5d0": {
-          "type": "accodion",
+        "3a47eea0-7611-41a9-991b-abaafff8f17f": {
+          "type": "accordion",
           "settings": {
-            "part_title": "ssdssddsd"
+            "part_title": "erererer"
+          }
+        },
+        "d35c5c24-e1ee-400d-a543-4eba17af41bf": {
+          "type": "accordion",
+          "settings": {
+            "part_title": "ytytytytty"
           }
         }
       },
@@ -72,7 +78,8 @@
         "description",
         "share",
         "30fcd108-f0d0-4f32-9033-8c5a73afd1ff",
-        "afcc1768-34bb-4504-ae55-857bcf1bc5d0"
+        "3a47eea0-7611-41a9-991b-abaafff8f17f",
+        "d35c5c24-e1ee-400d-a543-4eba17af41bf"
       ],
       "settings": {
         "enable_sticky_info": true,
