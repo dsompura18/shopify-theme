@@ -108,7 +108,8 @@
                   </div>
                   <div class="panel-body">
                     <p class="help-text-swatch" id="help-text-swatch-ctr-1">Selected texture - <b>Black Matrix</b></p>
-                    {% for item in product.metafields.custom.back.items %}
+            {% assign array_of_items = product.metafields.custom.back.value %}
+                    {% for item in array_of_items %}
                       {{ item }}
                     {% endfor %}
                     {{ product.metafields.custom.back }}
