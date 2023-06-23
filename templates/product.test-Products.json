@@ -54,6 +54,12 @@
             "text": "Text block",
             "text_style": "body"
           }
+        },
+        "79fce779-243f-4a28-8bb8-e18cef11d996": {
+          "type": "part",
+          "settings": {
+            "part_title": "sasa"
+          }
         }
       },
       "block_order": [
@@ -65,7 +71,8 @@
         "buy_buttons",
         "description",
         "share",
-        "30fcd108-f0d0-4f32-9033-8c5a73afd1ff"
+        "30fcd108-f0d0-4f32-9033-8c5a73afd1ff",
+        "79fce779-243f-4a28-8bb8-e18cef11d996"
       ],
       "settings": {
         "enable_sticky_info": true,
