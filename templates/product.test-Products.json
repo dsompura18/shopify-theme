@@ -68,7 +68,9 @@
         "d35c5c24-e1ee-400d-a543-4eba17af41bf": {
           "type": "accordion",
           "settings": {
-            "part_title": "ytytytytty"
+            "part_title": "ytytytytty",
+            "swatch_img_1": "shopify:\/\/shop_images\/carbon-fibre-red_small_dd78893b-3247-4643-a3aa-3493748a83ec.png",
+            "swatch_img_2": "shopify:\/\/shop_images\/colour-flip_small_0886d0df-214b-4663-bc3f-52ef02bf0918.webp"
           }
         }
       },
