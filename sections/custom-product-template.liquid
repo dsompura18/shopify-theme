@@ -2156,5 +2156,44 @@
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
+}
+.accordion-container .panel-body {
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+}
+.accordion-container p#help-text-swatch-ctr-1 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+} 
+.accordion-container label.texture-swatch {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    float: left;
+    text-align: center;
+    font-size: 10px;
+}
+.accordion-container label.texture-swatch input.texture-swatch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+.accordion-container label.texture-swatch img {
+    border: 2px solid #000;
+    padding: 1.5px;
+    cursor: pointer;
+    background-size: 60px 48px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    transition: opacity .2s,box-shadow .2s,-webkit-box-shadow .2s;
+    box-shadow: 0 0.05rem 0.25rem -0.1rem rgba(0, 0, 0, 0.75), 0 0.05rem 0.4rem -0.1rem rgba(0, 0, 0, 0.35);
 }  
 </style>
