@@ -89,8 +89,27 @@
                   </h2>
                 </a>
               </div>
+
+<!--             accordion custom block code:start -->
             {% when 'accordion' %}
-            <h2>{{ block.settings.part_title }}</h2>
+            <div class="accordion-container" data-option-index="0">
+              <div class="accordion-wrapper">
+                  <div class="accordion accordion-Back" data-coverage="Back">
+                    <div class="selected-swatch swatch-Back"></div>
+                    <div class="coverage-title">
+                      <p class="style-name">{{ block.settings.part_title }}</p>
+                      <span class="coverage-name" id="coverage-name-ctr-1"></span>
+                    </div>
+                    <div class="packQtyContainer"> 
+                    </div>
+                    <div class="utils-wrapper">
+                      <span class="cost">₹499</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+<!--             end   -->
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
