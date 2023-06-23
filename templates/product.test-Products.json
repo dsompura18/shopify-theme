@@ -55,10 +55,10 @@
             "text_style": "body"
           }
         },
-        "79fce779-243f-4a28-8bb8-e18cef11d996": {
-          "type": "part",
+        "afcc1768-34bb-4504-ae55-857bcf1bc5d0": {
+          "type": "accodion",
           "settings": {
-            "part_title": "sasa"
+            "part_title": "ssdssddsd"
           }
         }
       },
@@ -72,7 +72,7 @@
         "description",
         "share",
         "30fcd108-f0d0-4f32-9033-8c5a73afd1ff",
-        "79fce779-243f-4a28-8bb8-e18cef11d996"
+        "afcc1768-34bb-4504-ae55-857bcf1bc5d0"
       ],
       "settings": {
         "enable_sticky_info": true,
