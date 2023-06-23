@@ -110,7 +110,7 @@
                     <p class="help-text-swatch" id="help-text-swatch-ctr-1">Selected texture - <b>Black Matrix</b></p>
             {% assign array_of_items = product.metafields.custom.back.value %}
                     {% for item in array_of_items %}
-                      <img src="{{ item | file_url | remove: 'files' }}" />
+                      <img src="{{ item | file_url | img_url }}" />
                     {% endfor %}
                     <label class="texture-swatch">
                       <input type="radio" class="texture-swatch-input" name="properties[Back]" value="Black Matrix" data-preorder="false" data-coverage="back" data-coverageasis="Back" data-id="black-matrix-skin" data-counter="ctr-1" data-imgurl="//cdn.shopify.com/s/files/1/1684/4603/files/iphone-14-pro-max-back-black-matrix-skin.png?v=14965951567737468484" data-swatchurl="//cdn.shopify.com/s/files/1/1684/4603/t/288/assets/black-matrix_small.png?v=97384283198540495511686422158">
