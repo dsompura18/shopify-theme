@@ -109,7 +109,7 @@
                   <div class="panel-body">
                     <p class="help-text-swatch" id="help-text-swatch-ctr-1">Selected texture - <b>Black Matrix</b></p>
                     <label class="texture-swatch">
-                      {% assign swatch_title = block.settings.swatch_img_1 | split: '/' | last | split: '_'| first | replace:'-','' %}
+                      {% assign swatch_title = block.settings.swatch_img_1 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
                       <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="{{ swatch_title | capitalize }}" data-preorder="false" data-coverage="back" data-coverageasis="Back" data-id="black-matrix-skin" data-counter="ctr-1" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
                       <img src="{{ block.settings.swatch_img_1 | img_url  }}" />
                     </label>
