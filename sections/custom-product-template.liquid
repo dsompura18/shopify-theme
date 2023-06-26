@@ -2214,6 +2214,9 @@
     visibility: hidden;
     opacity: 0; */
 }
+.accordion-container .panel-body.active{
+   display: inline-block;
+}  
 .accordion-container p#help-text-swatch-ctr-1 {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -2341,4 +2344,9 @@ $('.swatch-charger').on('click', function(){
  $('.charger-bg').show(); 
  $('.charger-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
+
+$('.accordion').on('click', function(){
+    $(this).next('.panel-body').toggleClass('active');
+});
+  
 </script>
