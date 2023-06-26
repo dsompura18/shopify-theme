@@ -2267,6 +2267,8 @@ $('.swatch-back').on('click', function(){
     var l = arr.length;
     var ln = l-1;
     arr.splice(l-ln , 0, var_name);
+    var t = arr.indexOf("Back");
+    arr.move(t,1);
       console.log(arr.length);
       console.log(arr);  
     var myNewArray = arr.filter(function(elem, index, self) {
