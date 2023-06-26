@@ -2272,7 +2272,7 @@ $('.swatch-back').on('click', function(){
 
       const foundIdx = arr.findIndex(el => el == "Back");
       arr.splice(foundIdx, 1);
-      arr.unshift(itemToFind);
+      arr.unshift("Back");
       // console.log(arr.length);
       console.log(arr);  
     var myNewArray = arr.filter(function(elem, index, self) {
