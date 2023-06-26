@@ -2207,12 +2207,16 @@
     margin-bottom: 0;
 /*     display: inline-block; */
     display: none;
-/*     height: 0;
+    height: 0;
     visibility: hidden;
-    opacity: 0; */
+    opacity: 0;
+   transition: 0.5s linear;
 }
 .accordion-container .panel-body.active{
    display: inline-block;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
 }  
 .accordion-container p#help-text-swatch-ctr-1 {
     margin-bottom: 5px;
