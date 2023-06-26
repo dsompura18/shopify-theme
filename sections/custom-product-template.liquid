@@ -110,7 +110,7 @@
                     {% endcapture %}
              {% endcomment %}
                     <div class="utils-wrapper">
-                      <span class="cost">{{ product.selected_or_first_available_variant.price }}</span>
+                      <span class="cost">{{ product.selected_or_first_available_variant.price | money }}</span>
                     </div>
                   </div>
                   <div class="panel-body">
