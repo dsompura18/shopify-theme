@@ -102,15 +102,21 @@
                     </div>
                     <div class="packQtyContainer"> 
                     </div>
-            {% comment %}
+          
                     {% capture var_title %}
                     {% for variant in product.variants%}
                       {{ variant.title }}
                     {% endfor %}
                     {% endcapture %}
-             {% endcomment %}
+          
                     <div class="utils-wrapper">
-                      <span class="cost">{{ product.selected_or_first_available_variant.price | money  }}</span>
+                      <span class="cost">
+                        {% for variant in product.variants%}
+                          {% if variant.title ==  block.settings.part_title  %}
+                            {{ variant.price | money }}
+                          {% endif %}
+                        {% endfor %}
+                      </span>
                     </div>
                   </div>
                   <div class="panel-body">
