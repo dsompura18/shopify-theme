@@ -2241,6 +2241,8 @@
 </style>
 <script>
 $('.swatch-back').on('click', function(){
+  var title = $(this).val();
+  $(this).parent('.panel-body').find('.help-text-swatch b').text(title);
    var src = $(this).data('imgurl');
     // console.log("back click");
    $('.back-bg').show(); 
