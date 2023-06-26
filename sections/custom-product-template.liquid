@@ -2269,12 +2269,12 @@ $('.swatch-back').on('click', function(){
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
-    console.log(myNewArray);
     var isIndex = 3;
     var l = myNewArray.length;
     if(l > isIndex){
       myNewArray.splice(isIndex , 0, var_name);
     }
+    console.log(myNewArray);
     var variant = myNewArray.join('+');
     console.log(variant);
     $('variant-radios').find(`input[value="${variant}"]`).click();
