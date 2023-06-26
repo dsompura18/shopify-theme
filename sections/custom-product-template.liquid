@@ -2404,8 +2404,9 @@ $('.swatch-charger').on('click', function(){
 });
 
 $('.accordion').on('click', function(){
-    $(this).next('.panel-body').toggleClass('active');
-    $(this).parents('.accordion-container').siblings().find('.panel-body').removeClass('active');
+    // $(this).next('.panel-body').toggleClass('active');
+    // $(this).parents('.accordion-container').siblings().find('.panel-body').removeClass('active');
+    $(".panel-body").slideDown("slow");
 });
   
 </script>
