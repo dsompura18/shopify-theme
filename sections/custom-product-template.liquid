@@ -2351,8 +2351,10 @@ $('.swatch-charger').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   arr.push(var_name);
-   $.unique(arr); 
-   console.log(arr); 
+  var myNewArray = arr.filter(function(elem, index, self) {
+      return index === self.indexOf(elem);
+  });
+  console.log(myNewArray); 
   
    // code for change title
   var title = $(this).val();
