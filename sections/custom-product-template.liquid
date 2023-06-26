@@ -2258,29 +2258,66 @@
   
 </style>
 <script>
-var arr = [];
-var myNewArray = "";
+
+function getVariant() {
+  // var optionIndex = $(this).closest('.accordion-container').attr('data-option-index');
+  var val = [];
+
+  // Picks up changes in the individual radio buttons.
+
+
+  if ($('input[name="properties[Back]"]').is(':checked')) {
+    val.push("Back");
+  }
+
+  if ($('input[name="properties[Frame]"]').is(':checked')) {
+    val.push("Frame");
+  }
+
+  if ($('input[name="properties[Camera]"]').is(':checked')) {
+    val.push("Camera");
+  }
+
+  if ($('input[name="properties[Lens]"]').is(':checked')) {
+    val.push("Lens");
+  }
+
+  if ($('input[name="properties[Charger]"]').is(':checked')) {
+    val.push("Charger");
+  }
+
+
+  val = val.join('+');
+}
+
+
+
+
+  
+// var arr = [];
+// var myNewArray = "";
   
 $('.swatch-back').on('click', function(){
   // code for get variant name
-  var var_name = $(this).data('var'); 
-  if($(this).is(':checked')){
-      arr.push(var_name);
-      myNewArray = arr.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
-    console.log(myNewArray);  
-    // var isIndex = 3;
-    // var l = myNewArray.length;
-    // if(l > isIndex){
-    //   myNewArray.splice(isIndex , 0, var_name);
-    // }
-    var variant = myNewArray.join('+');
-    console.log(variant);
-    $('variant-radios').find(`input[value="${variant}"]`).click();
-  }else{
+  // var var_name = $(this).data('var'); 
+  // if($(this).is(':checked')){
+  //     arr.push(var_name);
+  //     myNewArray = arr.filter(function(elem, index, self) {
+  //       return index === self.indexOf(elem);
+  //   });
+  //   console.log(myNewArray);  
+  //   // var isIndex = 3;
+  //   // var l = myNewArray.length;
+  //   // if(l > isIndex){
+  //   //   myNewArray.splice(isIndex , 0, var_name);
+  //   // }
+  //   var variant = myNewArray.join('+');
+  //   console.log(variant);
+  //   $('variant-radios').find(`input[value="${variant}"]`).click();
+  // }else{
     
-  }
+  // }
+  getVariant();
   
   // code for change title
   var title = $(this).val();
@@ -2300,19 +2337,20 @@ $('.swatch-back').on('click', function(){
   
 $('.swatch-frame').on('click', function(){
   // code for get variant name
-  var var_name = $(this).data('var'); 
-  if($(this).is(':checked')){
-    arr.push(var_name);
-    myNewArray = arr.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
-     console.log(myNewArray); 
-    var variant = myNewArray.join('+');
-    console.log(variant);
-    $('variant-radios').find(`input[value="${variant}"]`).click();
-  }else{
+  // var var_name = $(this).data('var'); 
+  // if($(this).is(':checked')){
+  //   arr.push(var_name);
+  //   myNewArray = arr.filter(function(elem, index, self) {
+  //       return index === self.indexOf(elem);
+  //   });
+  //    console.log(myNewArray); 
+  //   var variant = myNewArray.join('+');
+  //   console.log(variant);
+  //   $('variant-radios').find(`input[value="${variant}"]`).click();
+  // }else{
     
-  }
+  // }
+  getVariant();
   
     // code for change title
   var title = $(this).val();
@@ -2332,19 +2370,20 @@ $('.swatch-frame').on('click', function(){
   
 $('.swatch-camera').on('click', function(){
     // code for get variant name
-    var var_name = $(this).data('var'); 
-    if($(this).is(':checked')){
-    arr.push(var_name);
-    myNewArray = arr.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
-    console.log(myNewArray); 
-    var variant = myNewArray.join('+');
-    console.log(variant);
-    $('variant-radios').find(`input[value="${variant}"]`).click();  
-  }else{
+  //   var var_name = $(this).data('var'); 
+  //   if($(this).is(':checked')){
+  //   arr.push(var_name);
+  //   myNewArray = arr.filter(function(elem, index, self) {
+  //       return index === self.indexOf(elem);
+  //   });
+  //   console.log(myNewArray); 
+  //   var variant = myNewArray.join('+');
+  //   console.log(variant);
+  //   $('variant-radios').find(`input[value="${variant}"]`).click();  
+  // }else{
     
-  }
+  // }
+  getVariant();
   
    // code for change title
   var title = $(this).val();
@@ -2364,19 +2403,20 @@ $('.swatch-camera').on('click', function(){
   
 $('.swatch-lens').on('click', function(){
   // code for get variant name
-  var var_name = $(this).data('var'); 
-  if($(this).is(':checked')){
-   arr.push(var_name);
-    myNewArray = arr.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
-     console.log(myNewArray); 
-    var variant = myNewArray.join('+');
-    console.log(variant);
-    $('variant-radios').find(`input[value="${variant}"]`).click();
-  }else{
+  // var var_name = $(this).data('var'); 
+  // if($(this).is(':checked')){
+  //  arr.push(var_name);
+  //   myNewArray = arr.filter(function(elem, index, self) {
+  //       return index === self.indexOf(elem);
+  //   });
+  //    console.log(myNewArray); 
+  //   var variant = myNewArray.join('+');
+  //   console.log(variant);
+  //   $('variant-radios').find(`input[value="${variant}"]`).click();
+  // }else{
     
-  }
+  // }
+  getVariant();
   
    // code for change title
   var title = $(this).val();
@@ -2396,29 +2436,21 @@ $('.swatch-lens').on('click', function(){
   
 $('.swatch-charger').on('click', function(){
   // code for get variant name
-  var var_name = $(this).data('var'); 
-  if($(this).is(':checked')){
-    // var isIndex = 4;
-    // var l = myNewArray.length;
-    // console.log(myNewArray); 
-    // if(l < isIndex){
-    //   var n = l-1;
-    //   arr.splice( n, 0, var_name);
-    // }else{
-    //   arr.splice(isIndex , 0, var_name);
-    // }
-    arr.push(var_name);
-    myNewArray = arr.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
-    myNewArray.splice(0,0);
-    console.log(myNewArray); 
-    var variant = myNewArray.join('+');
-    console.log(variant);
-    $('variant-radios').find(`input[value="${variant}"]`).click();
-  }else{
+  // var var_name = $(this).data('var'); 
+  // if($(this).is(':checked')){
+  //   arr.push(var_name);
+  //   myNewArray = arr.filter(function(elem, index, self) {
+  //       return index === self.indexOf(elem);
+  //   });
+  //   myNewArray.splice(0,0);
+  //   console.log(myNewArray); 
+  //   var variant = myNewArray.join('+');
+  //   console.log(variant);
+  //   $('variant-radios').find(`input[value="${variant}"]`).click();
+  // }else{
     
-  }
+  // }
+  getVariant();
   
    // code for change title
   var title = $(this).val();
