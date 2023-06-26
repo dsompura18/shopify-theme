@@ -2290,6 +2290,7 @@ function getVariant() {
   val = val.join('+');
 
   console.log(val);
+   $('variant-radios').find(`input[value="${val}"]`).click();
 }
 
 
