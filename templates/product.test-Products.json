@@ -74,6 +74,16 @@
             "swatch_img_2": "shopify:\/\/shop_images\/colour-flip_small_0886d0df-214b-4663-bc3f-52ef02bf0918.webp",
             "swatch_banner_img_2": "shopify:\/\/shop_images\/iphone-14-pro-max-frame-colour-flip-skin.webp"
           }
+        },
+        "6def1ee2-1215-4359-8fb3-0bc739b8b685": {
+          "type": "accordion",
+          "settings": {
+            "part_title": "Camera",
+            "swatch_img_1": "shopify:\/\/shop_images\/carbon-fibre-red_small_dd78893b-3247-4643-a3aa-3493748a83ec.png",
+            "swatch_banner_img_1": "shopify:\/\/shop_images\/iphone-14-pro-max-camera-carbon-fibre-red-skin.webp",
+            "swatch_img_2": "shopify:\/\/shop_images\/colour-flip_small_0886d0df-214b-4663-bc3f-52ef02bf0918.webp",
+            "swatch_banner_img_2": "shopify:\/\/shop_images\/iphone-14-pro-max-camera-colour-flip-skin.webp"
+          }
         }
       },
       "block_order": [
@@ -87,7 +97,8 @@
         "share",
         "30fcd108-f0d0-4f32-9033-8c5a73afd1ff",
         "3a47eea0-7611-41a9-991b-abaafff8f17f",
-        "d35c5c24-e1ee-400d-a543-4eba17af41bf"
+        "d35c5c24-e1ee-400d-a543-4eba17af41bf",
+        "6def1ee2-1215-4359-8fb3-0bc739b8b685"
       ],
       "settings": {
         "enable_sticky_info": true,
