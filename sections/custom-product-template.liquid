@@ -2259,22 +2259,29 @@
 </style>
 <script>
 var arr = [];
+var  myNewArray = "";
   
 $('.swatch-back').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
+    // var isIndex = 3;
+    // var l = arr.length;
+    // if(l > isIndex){
+    //   myNewArray.splice(isIndex , 0, var_name);
+    // }
+    console.log(myNewArray.length);
     arr.push(var_name);
     console.log(arr);  
-    var myNewArray = arr.filter(function(elem, index, self) {
+      myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
-    var isIndex = 3;
-    var l = myNewArray.length;
-    if(l > isIndex){
-      myNewArray.splice(isIndex , 0, var_name);
-    }
-    console.log(myNewArray);
+    
+    // var isIndex = 3;
+    // var l = myNewArray.length;
+    // if(l > isIndex){
+    //   myNewArray.splice(isIndex , 0, var_name);
+    // }
     var variant = myNewArray.join('+');
     console.log(variant);
     $('variant-radios').find(`input[value="${variant}"]`).click();
