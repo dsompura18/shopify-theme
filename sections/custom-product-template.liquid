@@ -102,6 +102,9 @@
                     </div>
                     <div class="packQtyContainer"> 
                     </div>
+                    {% for variant in product.variants%}
+                      {{ variant.title }}
+                    {% endfor %}
                     <div class="utils-wrapper">
                       <span class="cost">₹499</span>
                     </div>
