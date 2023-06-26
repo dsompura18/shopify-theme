@@ -2264,12 +2264,12 @@ $('.swatch-back').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    // var l = arr.length;
-    // var ln = l-1;
-    // arr.splice(l-ln , 0, var_name);
+    var l = arr.length;
+    var ln = l-1;
+    arr.splice(l-ln , 0, var_name);
     // var t = arr.indexOf("Back");
     // arr.move(t,1);
-
+      
       const foundIdx = arr.findIndex(el => el == "Back");
       console.log(foundIdx);
       arr.splice(foundIdx, 1);
