@@ -15,47 +15,6 @@
           "settings": {
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "30fcd108-f0d0-4f32-9033-8c5a73afd1ff": {
-          "type": "text",
-          "settings": {
-            "text": "Text block",
-            "text_style": "body"
-          }
-        },
         "3a47eea0-7611-41a9-991b-abaafff8f17f": {
           "type": "accordion",
           "settings": {
@@ -105,23 +64,64 @@
             "swatch_img_2": "shopify:\/\/shop_images\/colour-flip_small_0886d0df-214b-4663-bc3f-52ef02bf0918.webp",
             "swatch_banner_img_2": "shopify:\/\/shop_images\/iphone-14-pro-max-charger-colour-flip-skin.webp"
           }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "30fcd108-f0d0-4f32-9033-8c5a73afd1ff": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "3a47eea0-7611-41a9-991b-abaafff8f17f",
+        "d35c5c24-e1ee-400d-a543-4eba17af41bf",
+        "6def1ee2-1215-4359-8fb3-0bc739b8b685",
+        "a6b3a100-ca8a-4bc2-95c5-387706be06d0",
+        "50f664cd-a395-4f98-8bf6-68f8b2d3d752",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
         "share",
-        "30fcd108-f0d0-4f32-9033-8c5a73afd1ff",
-        "3a47eea0-7611-41a9-991b-abaafff8f17f",
-        "d35c5c24-e1ee-400d-a543-4eba17af41bf",
-        "6def1ee2-1215-4359-8fb3-0bc739b8b685",
-        "a6b3a100-ca8a-4bc2-95c5-387706be06d0",
-        "50f664cd-a395-4f98-8bf6-68f8b2d3d752"
+        "30fcd108-f0d0-4f32-9033-8c5a73afd1ff"
       ],
       "settings": {
         "enable_sticky_info": true,
