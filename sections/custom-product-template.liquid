@@ -2403,7 +2403,9 @@ $('.swatch-charger').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    arr.splice(4, 0, var_name);
+    var l = arr.length;
+    var ln = l-1;
+    arr.splice(l-ln , 0, var_name);
       console.log(arr);  
      console.log(arr.length);
     var myNewArray = arr.filter(function(elem, index, self) {
