@@ -92,6 +92,9 @@
 
 <!--     newtask  accordion custom block code:start -->
             {% when 'accordion' %}
+            <div class="hidden">
+              {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+            </div>
             <div class="accordion-container" data-option-index="0">
               <div class="accordion-wrapper">
                   <div class="accordion accordion-Back" data-coverage="Back">
