@@ -2271,6 +2271,7 @@ $('.swatch-back').on('click', function(){
     // arr.move(t,1);
 
       const foundIdx = arr.findIndex(el => el == "Back");
+      console.log(foundIdx);
       arr.splice(foundIdx, 1);
       arr.unshift("Back");
       // console.log(arr.length);
