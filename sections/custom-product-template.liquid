@@ -2261,7 +2261,13 @@
   
 </style>
 <script>
+var arr = [];
+  
 $('.swatch-back').on('click', function(){
+  // code for get variant name
+  var var_name = $(this).data('var'); 
+  arr.push(var_name);
+  
   // code for change title
   var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
