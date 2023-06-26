@@ -2265,16 +2265,7 @@ $('.swatch-back').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    var isIndex = 0;
-    var l = myNewArray.length;
-    if(l < isIndex){
-      var n = l-1;
-      arr.splice( n, 0, var_name);
-    }else{
-      arr.splice(isIndex , 0, var_name);
-    }
-    // console.log(myNewArray.length);
-    // arr.push(var_name);
+      arr.push(var_name);
       myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2311,19 +2302,7 @@ $('.swatch-frame').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    //  var l = arr.length;
-    // var ln = l-1;
-    // arr.splice(l-ln , 0, var_name);
-    //   console.log(arr);  
-    //    console.log(arr.length);
-    var isIndex = 1;
-    var l = myNewArray.length;
-    if(l < isIndex){
-      var n = l-1;
-      arr.splice( n, 0, var_name);
-    }else{
-      arr.splice(isIndex , 0, var_name);
-    }
+    arr.push(var_name);
     myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2355,14 +2334,7 @@ $('.swatch-camera').on('click', function(){
     // code for get variant name
     var var_name = $(this).data('var'); 
     if($(this).is(':checked')){
-   var isIndex = 2;
-    var l = myNewArray.length;
-    if(l < isIndex){
-      var n = l-1;
-      arr.splice( n, 0, var_name);
-    }else{
-      arr.splice(isIndex , 0, var_name);
-    }
+    arr.push(var_name);
     myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2394,15 +2366,7 @@ $('.swatch-lens').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    var isIndex = 3;
-    var l = myNewArray.length;
-    console.log(myNewArray); 
-    if(l < isIndex){
-      var n = l-1;
-      arr.splice( n, 0, var_name);
-    }else{
-      arr.splice(isIndex , 0, var_name);
-    }
+   arr.push(var_name);
     myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2434,15 +2398,16 @@ $('.swatch-charger').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    var isIndex = 4;
-    var l = myNewArray.length;
-    console.log(myNewArray); 
-    if(l < isIndex){
-      var n = l-1;
-      arr.splice( n, 0, var_name);
-    }else{
-      arr.splice(isIndex , 0, var_name);
-    }
+    // var isIndex = 4;
+    // var l = myNewArray.length;
+    // console.log(myNewArray); 
+    // if(l < isIndex){
+    //   var n = l-1;
+    //   arr.splice( n, 0, var_name);
+    // }else{
+    //   arr.splice(isIndex , 0, var_name);
+    // }
+    arr.push(var_name);
     myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
