@@ -2269,7 +2269,7 @@ $('.swatch-back').on('click', function(){
     var l = myNewArray.length;
     if(l < isIndex){
       var n = l-1;
-      arr.splice( n, 0, var_name);
+      arr.splice( l-n, 0, var_name);
     }else{
       arr.splice(isIndex , 0, var_name);
     }
