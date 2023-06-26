@@ -2299,7 +2299,7 @@ $('.swatch-frame').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    arr.push(var_name);
+    arr.splice(1, 0, var_name);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2331,7 +2331,7 @@ $('.swatch-camera').on('click', function(){
     // code for get variant name
     var var_name = $(this).data('var'); 
     if($(this).is(':checked')){
-    arr.push(var_name);
+    arr.splice(2, 0, var_name);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2363,7 +2363,7 @@ $('.swatch-lens').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    arr.push(var_name);
+    arr.splice(3, 0, var_name);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2395,7 +2395,7 @@ $('.swatch-charger').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    arr.push(var_name);
+    arr.splice(4, 0, var_name);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
