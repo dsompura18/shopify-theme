@@ -2267,7 +2267,7 @@ $('.swatch-back').on('click', function(){
   // code for get variant name
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
-    arr.splice(index, 0, var_name);
+    arr.splice(0, 0, var_name);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
