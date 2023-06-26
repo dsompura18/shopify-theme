@@ -2274,7 +2274,7 @@ $('.swatch-back').on('click', function(){
     console.log(myNewArray); 
     var variant = myNewArray.join('+');
     console.log(variant);
-    
+    $('variant-radios').find(`input[value="${variant}"]`).click();
   }else{
     
   }
