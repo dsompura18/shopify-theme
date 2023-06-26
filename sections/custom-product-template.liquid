@@ -102,11 +102,15 @@
                     </div>
                     <div class="packQtyContainer"> 
                     </div>
+            {% comment %}
+                    {% capture var_title %}
                     {% for variant in product.variants%}
                       {{ variant.title }}
                     {% endfor %}
+                    {% endcapture %}
+             {% endcomment %}
                     <div class="utils-wrapper">
-                      <span class="cost">₹499</span>
+                      <span class="cost"></span>
                     </div>
                   </div>
                   <div class="panel-body">
