@@ -2347,6 +2347,7 @@ $('.swatch-charger').on('click', function(){
 
 $('.accordion').on('click', function(){
     $(this).next('.panel-body').toggleClass('active');
+    $(this).parents('.accordion-container').siblings().find('.panel-body').removeClass('active');
 });
   
 </script>
