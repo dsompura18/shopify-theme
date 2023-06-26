@@ -2238,4 +2238,10 @@ $('.swatch-back').on('click', function(){
    $('.back-bg').show(); 
    $('.back-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
+$('.swatch-frame').on('click', function(){
+   var src = $(this).data('imgurl');
+    console.log(src);
+   $('.frame-bg').show(); 
+   $('.frame-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
+});
 </script>
