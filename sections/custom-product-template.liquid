@@ -2285,6 +2285,10 @@ $('.swatch-back').on('click', function(){
 
   
 $('.swatch-frame').on('click', function(){
+  // code for get variant name
+  var var_name = $(this).data('var'); 
+  arr.push(var_name);
+  
     // code for change title
   var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
@@ -2302,6 +2306,10 @@ $('.swatch-frame').on('click', function(){
 
   
 $('.swatch-camera').on('click', function(){
+    // code for get variant name
+    var var_name = $(this).data('var'); 
+    arr.push(var_name);
+  
    // code for change title
   var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
@@ -2319,6 +2327,10 @@ $('.swatch-camera').on('click', function(){
 
   
 $('.swatch-lens').on('click', function(){
+  // code for get variant name
+  var var_name = $(this).data('var'); 
+  arr.push(var_name);
+  
    // code for change title
   var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
@@ -2336,6 +2348,10 @@ $('.swatch-lens').on('click', function(){
 
   
 $('.swatch-charger').on('click', function(){
+  // code for get variant name
+  var var_name = $(this).data('var'); 
+  arr.push(var_name);
+  
    // code for change title
   var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
