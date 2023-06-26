@@ -2241,9 +2241,16 @@
 </style>
 <script>
 $('.swatch-back').on('click', function(){
+  // code for change title
   var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
-   var src = $(this).data('imgurl');
+
+  // code for change image of accordion
+  var thumb_img = $(this).next('img').attr('src');
+  $(this).parents('.accordion-wrapper').find('.swatch-Back').css('background-image',`url(${thumb_img})`);
+  
+  // change for main image 
+  var src = $(this).data('imgurl');
     // console.log("back click");
    $('.back-bg').show(); 
    $('.back-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
