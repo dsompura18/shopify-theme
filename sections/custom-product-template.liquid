@@ -2268,7 +2268,7 @@ $('.swatch-back').on('click', function(){
   var var_name = $(this).data('var'); 
   if($(this).is(':checked')){
     arr.splice(0, 0, var_name);
-      console.log(arr.length)
+      console.log(arr.length);
       console.log(arr);  
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
@@ -2303,6 +2303,7 @@ $('.swatch-frame').on('click', function(){
   if($(this).is(':checked')){
     arr.splice(1, 0, var_name);
       console.log(arr);  
+       console.log(arr.length);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2336,6 +2337,7 @@ $('.swatch-camera').on('click', function(){
     if($(this).is(':checked')){
     arr.splice(2, 0, var_name);
     console.log(arr);  
+       console.log(arr.length);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2369,6 +2371,7 @@ $('.swatch-lens').on('click', function(){
   if($(this).is(':checked')){
     arr.splice(3, 0, var_name);
       console.log(arr);  
+     console.log(arr.length);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
@@ -2402,6 +2405,7 @@ $('.swatch-charger').on('click', function(){
   if($(this).is(':checked')){
     arr.splice(4, 0, var_name);
       console.log(arr);  
+     console.log(arr.length);
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
