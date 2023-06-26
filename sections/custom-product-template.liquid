@@ -2266,7 +2266,7 @@ $('.swatch-back').on('click', function(){
   if($(this).is(':checked')){
     // var l = arr.length;
     // var ln = l-1;
-    arr.push(var_name);
+    // arr.push(var_name);
     
     const fromIndex = arr.indexOf('Back'); 
     var toIndex = 3;
@@ -2275,11 +2275,11 @@ $('.swatch-back').on('click', function(){
     }else{
       toIndex = 3;
     }
+     arr.splice(toIndex, 0, var_name);
+    // const element = arr.splice(fromIndex, 1)[0];
+    // console.log(element); // ['css']
     
-    const element = arr.splice(fromIndex, 1)[0];
-    console.log(element); // ['css']
-    
-    arr.splice(toIndex, 0, element);
+    // arr.splice(toIndex, 0, element);
     
     console.log(arr);  
     var myNewArray = arr.filter(function(elem, index, self) {
