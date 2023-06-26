@@ -2266,16 +2266,16 @@ $('.swatch-back').on('click', function(){
   if($(this).is(':checked')){
     // var l = arr.length;
     // var ln = l-1;
-    // arr.push(var_name);
+    arr.push(var_name);
     
-    const fromIndex = arr.indexOf('Back'); 
-    var toIndex = 3;
-    if(arr.length < toIndex){
-      toIndex = arr.length-1;
-    }else{
-      toIndex = 3;
-    }
-     arr.splice(toIndex, 0, var_name);
+    // const fromIndex = arr.indexOf('Back'); 
+    // var toIndex = 3;
+    // if(arr.length < toIndex){
+    //   toIndex = arr.length-1;
+    // }else{
+    //   toIndex = 3;
+    // }
+     // arr.splice(toIndex, 0, var_name);
     // const element = arr.splice(fromIndex, 1)[0];
     // console.log(element); // ['css']
     
@@ -2285,6 +2285,14 @@ $('.swatch-back').on('click', function(){
     var myNewArray = arr.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
+    const fromIndex = myNewArray.indexOf('Back'); 
+    var toIndex = 3;
+    if(myNewArray.length < toIndex){
+      toIndex = myNewArray.length-1;
+    }else{
+      toIndex = 3;
+    }
+    myNewArray.splice(toIndex, 0, element)
     console.log(myNewArray); 
     var variant = myNewArray.join('+');
     console.log(variant);
