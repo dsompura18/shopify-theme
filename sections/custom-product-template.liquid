@@ -2196,6 +2196,9 @@
     width: 100%;
     margin-bottom: 0;
     display: inline-block;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
 }
 .accordion-container p#help-text-swatch-ctr-1 {
     margin-bottom: 5px;
@@ -2232,11 +2235,12 @@
     transition: opacity .2s,box-shadow .2s,-webkit-box-shadow .2s;
     box-shadow: 0 0.05rem 0.25rem -0.1rem rgba(0, 0, 0, 0.75), 0 0.05rem 0.4rem -0.1rem rgba(0, 0, 0, 0.35);
 }  
-.back-bg,.frame-bg,.camera-bg,.lens-bg,.charger-bg{
+.accordion-container .back-bg,.accordion-container .frame-bg,.accordion-container .camera-bg,.accordion-container .lens-bg,.accordion-container .charger-bg{
   position:absolute;
   top:0;
   left:0;
 }
+
   
 </style>
 <script>
