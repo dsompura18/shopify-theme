@@ -2296,6 +2296,7 @@ function getVariant() {
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
+     console.log(val);
   }else{
     const index = val.indexOf("Back");
     if (index > -1) { 
