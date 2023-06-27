@@ -2325,50 +2325,6 @@ function getVariant() {
   }
 }
 
-function removeVariant(){
-var val=[];
-  if ($('input[name="properties[Frame]"]').not(':checked')) {
-     const index = val.indexOf("Back");
-      if (index > -1) { 
-        val.splice(index, 1); 
-      }
-  }
-
-  if ($('input[name="properties[Camera]"]').not(':checked')) {
-     const index = val.indexOf("Camera");
-      if (index > -1) { 
-        val.splice(index, 1); 
-      }
-  }
-
-  if ($('input[name="properties[Lens]"]').not(':checked')) {
-    const index = val.indexOf("Lens");
-      if (index > -1) { 
-        val.splice(index, 1); 
-      }
-  }
-
-  if ($('input[name="properties[Charger]"]').not(':checked')) {
-     const index = val.indexOf("Charger");
-      if (index > -1) { 
-        val.splice(index, 1); 
-      }
-  }
-
-   val = val.join('+');
-
-  console.log(val);
-  if(val.length !== 0){
-   $('variant-radios').find(`input[value="${val}"]`).click();
-  }else{
-   $('variant-radios').find(`input[value="null"]`).click();
-  }
-}
-
-
-  
-// var arr = [];
-// var myNewArray = "";
   
 $('.swatch-back').on('click', function(){
   // code for get variant name
