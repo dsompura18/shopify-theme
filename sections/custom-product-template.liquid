@@ -2297,12 +2297,6 @@ function getVariant() {
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
      console.log(val);
-  }else{
-    // const index = val.indexOf("Back");
-    // if (index > -1) { 
-    //   val.splice(index, 1); 
-    // }
-    // console.log(val);
   }
 
   if ($('input[name="properties[Frame]"]').is(':checked')) {
@@ -2328,7 +2322,36 @@ function getVariant() {
    $('variant-radios').find(`input[value="${val}"]`).click();
 }
 
+function removeVariant(){
+  var val = [];
+  if ($('input[name="properties[Frame]"]').not(':checked')) {
+     const index = val.indexOf("Back");
+      if (index > -1) { 
+        val.splice(index, 1); 
+      }
+  }
 
+  if ($('input[name="properties[Camera]"]').not(':checked')) {
+     const index = val.indexOf("Camera");
+      if (index > -1) { 
+        val.splice(index, 1); 
+      }
+  }
+
+  if ($('input[name="properties[Lens]"]').not(':checked')) {
+    const index = val.indexOf("Lens");
+      if (index > -1) { 
+        val.splice(index, 1); 
+      }
+  }
+
+  if ($('input[name="properties[Charger]"]').not(':checked')) {
+     const index = val.indexOf("Charger");
+      if (index > -1) { 
+        val.splice(index, 1); 
+      }
+  }
+}
 
 
   
