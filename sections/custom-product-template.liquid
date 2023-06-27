@@ -2409,5 +2409,9 @@ $('.accordion').on('click', function(){
     $(this).next('.panel_box').slideToggle();
     $(this).parents('.accordion-container').siblings().find('.panel_box').slideUp();
 });
+
+$(window).on("load", function () {
+     $('variant-radios').find(`input[value="null"]`).click();
+});
   
 </script>
