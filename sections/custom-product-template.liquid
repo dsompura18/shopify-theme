@@ -2457,7 +2457,7 @@ $('.swatch-charger').on('click', function(){
   // code for change image of accordion
   var thumb_img = $(this).next('img').attr('src');
   $(this).parents('.accordion-wrapper').find('.swatch-Charger').addClass('selected');
-  $(this).parents('.accordion-wrapper').find('.selected').css("background-image",`url(${thumb_img})`);
+  
   // change for main image
  var src = $(this).data('imgurl');
   // console.log("frame click");
@@ -2479,9 +2479,8 @@ $(window).on("load", function () {
 
   // code for remove unchecked swatch 
 $('.deselect-swatch').on('click', function(){
-   $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false);
+   $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
    getVariant();
-   $(this).parents('.accordion-wrapper').find('.selected-swatch').removeClass('selected'); 
     // var variant = $(this).data('var');
     // const index = val.indexOf(variant);
     // if (index > -1) { 
