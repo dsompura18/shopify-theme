@@ -2322,7 +2322,7 @@ function getVariant() {
 }
 
 function removeVariant(){
-
+var val=[];
   if ($('input[name="properties[Frame]"]').not(':checked')) {
      const index = val.indexOf("Back");
       if (index > -1) { 
@@ -2475,7 +2475,7 @@ $(window).on("load", function () {
   // code for remove unchecked swatch 
 $('.deselect-swatch').on('click', function(){
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
-   removeVariant();
+   getVariant();
     // var variant = $(this).data('var');
     // const index = val.indexOf(variant);
     // if (index > -1) { 
