@@ -60,7 +60,7 @@
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
-        {% if product.selected_or_first_available_variant.price == '0.00' %}test{% endif %}
+        {% if product.selected_or_first_available_variant.price == 0 %}test{% endif %}
           >
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
