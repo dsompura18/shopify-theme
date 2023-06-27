@@ -2351,6 +2351,11 @@ function removeVariant(){
         val.splice(index, 1); 
       }
   }
+
+   val = val.join('+');
+
+  console.log(val);
+   $('variant-radios').find(`input[value="${val}"]`).click();
 }
 
 
