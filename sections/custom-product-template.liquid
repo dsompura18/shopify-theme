@@ -2448,5 +2448,6 @@ $(window).on("load", function () {
   // code for remove unchecked swatch 
 $('.deselect-swatch').on('click', function(){
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
+   getVariant();
 });  
 </script>
