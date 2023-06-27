@@ -2203,12 +2203,14 @@
     top: 50%;
     transform: translateY(-50%);
 }
+  .accordion-container .panel_box{
+    display: none;
+  }
 .accordion-container .panel-body {
     background-color: #fff;
     width: 100%;
     margin-bottom: 0;
-/*     display: inline-block; */
-    display: none;
+    display: inline-block;
 /*     height: 0;
    visibility: hidden;
    opacity: 0; */
@@ -2403,8 +2405,8 @@ $('.swatch-charger').on('click', function(){
 });
 
 $('.accordion').on('click', function(){
-    $(this).next('.panel-body').toggleClass('active');
-    $(this).parents('.accordion-container').siblings().find('.panel-body').removeClass('active');
+    $(this).next('.panel_box').toggleClass('active');
+    $(this).parents('.accordion-container').siblings().find('.panel_box').removeClass('active');
 });
   
 </script>
