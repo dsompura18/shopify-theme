@@ -2481,7 +2481,7 @@ $(window).on("load", function () {
 $('.deselect-swatch').on('click', function(){
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false);
    getVariant();
-   $(this).parents('.accordion-wrapper').find('.swatch-Charger').removeClass('selected'); 
+   $(this).parents('.accordion-wrapper').find('.selected-swatch').removeClass('selected'); 
     // var variant = $(this).data('var');
     // const index = val.indexOf(variant);
     // if (index > -1) { 
