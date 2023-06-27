@@ -2298,11 +2298,11 @@ function getVariant() {
     val.push("Back");
      console.log(val);
   }else{
-    const index = val.indexOf("Back");
-    if (index > -1) { 
-      val.splice(index, 1); 
-    }
-    console.log(val);
+    // const index = val.indexOf("Back");
+    // if (index > -1) { 
+    //   val.splice(index, 1); 
+    // }
+    // console.log(val);
   }
 
   if ($('input[name="properties[Frame]"]').is(':checked')) {
@@ -2448,6 +2448,12 @@ $(window).on("load", function () {
   // code for remove unchecked swatch 
 $('.deselect-swatch').on('click', function(){
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
-   getVariant();
+   // getVariant();
+    var variant = $(this).data('var');
+    const index = val.indexOf(variant);
+    if (index > -1) { 
+      val.splice(index, 1); 
+    }
+    console.log(val);
 });  
 </script>
