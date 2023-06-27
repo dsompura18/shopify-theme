@@ -2296,6 +2296,12 @@ function getVariant() {
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
+  }else{
+    const index = val.indexOf("Back");
+    if (index > -1) { 
+      val.splice(index, 1); 
+    }
+    console.log(val);
   }
 
   if ($('input[name="properties[Frame]"]').is(':checked')) {
@@ -2426,14 +2432,20 @@ $('.swatch-charger').on('click', function(){
  $('.charger-bg').show(); 
  $('.charger-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
-
+  
+//accordion code 
 $('.accordion').on('click', function(){
     $(this).next('.panel_box').slideToggle();
     $(this).parents('.accordion-container').siblings().find('.panel_box').slideUp();
 });
 
+  //on load reset all variant 
 $(window).on("load", function () {
      $('variant-radios').find(`input[value="null"]`).click();
 });
-  
+
+  // code for remove unchecked swatch 
+$('.deselect-swatch').on('click', function(){
+   $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
+});  
 </script>
