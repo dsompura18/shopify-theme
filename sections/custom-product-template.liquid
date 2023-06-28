@@ -120,13 +120,11 @@
                       <label class="texture-swatch">
                         {% assign swatch_title_1 = block.settings.swatch_img_1 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
                         {% assign swatch_title_2 = block.settings.swatch_img_2 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
-                        <p class="cart-attribute__field">
-                        <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="attributes[{{ block.settings.part_title }}]" value="{{ cart.attributes["Your name"] }}" data-value="- {{ swatch_title_1 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
-                        <p>
+                        <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_1 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
                         <img src="{{ block.settings.swatch_img_1 | img_url  }}" />
                       </label>
                       <label class="texture-swatch">
-                        <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="attributes[{{ block.settings.part_title }}]" value="{{ cart.attributes["Your name"] }}" data-value="- {{ swatch_title_2 | capitalize }}"  data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
+                        <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_2 | capitalize }}"  data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
                         <img src="{{ block.settings.swatch_img_2 | img_url  }}" />
                       </label>
                       <label class="deselect">
@@ -2296,23 +2294,23 @@ function getVariant(){
   // Picks up changes in the individual radio buttons.
 
 
-  if ($('input[name="attributes[Back]"]').is(':checked')) {
+  if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
   }
 
-  if ($('input[name="attributes[Frame]"]').is(':checked')) {
+  if ($('input[name="properties[Frame]"]').is(':checked')) {
     val.push("Frame");
   }
 
-  if ($('input[name="attributes[Camera]"]').is(':checked')) {
+  if ($('input[name="properties[Camera]"]').is(':checked')) {
     val.push("Camera");
   }
 
-  if ($('input[name="attributes[Lens]"]').is(':checked')) {
+  if ($('input[name="properties[Lens]"]').is(':checked')) {
     val.push("Lens");
   }
 
-  if ($('input[name="attributes[Charger]"]').is(':checked')) {
+  if ($('input[name="properties[Charger]"]').is(':checked')) {
     val.push("Charger");
   }
 
@@ -2337,23 +2335,23 @@ function removeVariant() {
   // Picks up changes in the individual radio buttons.
 
 
-  if (!$('input[name="attributes[Back]"]').is(':checked')) {
+  if (!$('input[name="properties[Back]"]').is(':checked')) {
     $('.back-bg').hide();
   }
 
-  if (!$('input[name="attributes[Frame]"]').is(':checked')) {
+  if (!$('input[name="properties[Frame]"]').is(':checked')) {
      $('.frame-bg').hide();
   }
 
-  if (!$('input[name="attributes[Camera]"]').is(':checked')) {
+  if (!$('input[name="properties[Camera]"]').is(':checked')) {
      $('.camera-bg').hide();
   }
 
-  if (!$('input[name="attributes[Lens]"]').is(':checked')) {
+  if (!$('input[name="properties[Lens]"]').is(':checked')) {
      $('.lens-bg').hide();
   }
 
-  if (!$('input[name="attributes[Charger]"]').is(':checked')) {
+  if (!$('input[name="properties[Charger]"]').is(':checked')) {
      $('.charger-bg').hide();
   }
 
@@ -2364,7 +2362,7 @@ $('.swatch-back').on('click', function(){
   getVariant();
   
   // code for change title
-  var title = $(this).data('value');
+  var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
 
   // code for change image of accordion
@@ -2384,7 +2382,7 @@ $('.swatch-frame').on('click', function(){
   getVariant();
   
     // code for change title
-  var title = $(this).data('value');
+  var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
 
   // code for change image of accordion
@@ -2404,7 +2402,7 @@ $('.swatch-camera').on('click', function(){
   getVariant();
   
    // code for change title
-  var title = $(this).data('value');
+  var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
 
   // code for change image of accordion
@@ -2424,7 +2422,7 @@ $('.swatch-lens').on('click', function(){
   getVariant();
   
    // code for change title
-  var title = $(this).data('value');
+  var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
 
   // code for change image of accordion
@@ -2444,7 +2442,7 @@ $('.swatch-charger').on('click', function(){
   getVariant();
   
    // code for change title
-  var title = $(this).data('value');
+  var title = $(this).val();
   $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
 
   // code for change image of accordion
