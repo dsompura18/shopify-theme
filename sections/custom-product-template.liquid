@@ -2483,15 +2483,17 @@ $('button.product-form__submit').on('click', function(){
       camera_swatch = $('.swatch-camera').data('swatch'),
       lens_swatch = $('.swatch-lens').data('swatch'),
       charger_swatch = $('.swatch-charger').data('swatch');
-      $.ajax({
+      jQuery.ajax({
           type: 'POST',
-          url: '/cart/update.js',
+          url: '/cart/add.js',
           data: { quantity: 1, id: id },
-          body:JSON.stringify({
-            attributes: {
-                  Back:back_swatch
-            }
-          })   
+          properties: { 
+            'Back':back_swatch,
+             'Frame':frame_swatch,
+             'Camera':camera_swatch,
+             'Lens':lens_swatch,
+             'Charger':charger_swatch
+          }
       });
 });  
 </script>
