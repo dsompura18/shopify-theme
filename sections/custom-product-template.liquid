@@ -120,11 +120,11 @@
                         <label class="texture-swatch">
                           {% assign swatch_title_1 = block.settings.swatch_img_1 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
                           {% assign swatch_title_2 = block.settings.swatch_img_2 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
-                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_1 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
+                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_1 | capitalize }}" data-swatch="{{ swatch_title_1 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
                           <img src="{{ block.settings.swatch_img_1 | img_url  }}" />
                         </label>
                         <label class="texture-swatch">
-                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_2 | capitalize }}"  data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
+                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_2 | capitalize }}" data-swatch="{{ swatch_title_2 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
                           <img src="{{ block.settings.swatch_img_2 | img_url  }}" />
                         </label>
                         <label class="deselect">
@@ -2476,5 +2476,15 @@ $('.deselect-swatch').on('click', function(){
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`);
 });  
 
-  
+$('button.product-form__submit').on('click', function(){
+  var id= $('.product-variant-id').val();
+  var swatch_name = 
+  $.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+        data: { quantity: 1, id: id },
+        properties: { 'swatch_option' :swatch_name },
+      async:false
+  });
+});  
 </script>
