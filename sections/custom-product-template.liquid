@@ -2487,7 +2487,13 @@ $('button.product-form__submit').on('click', function(){
       type: 'POST',
       url: '/cart/add.js',
         data: { quantity: 1, id: id },
-        properties: { 'swatch_option' :swatch_name },
+        properties: { 
+          'Back' :back_swatch,
+           'Frame' :frame_swatch,
+           'Camera' :camera_swatch,
+           'Lens' :lens_swatch,
+           'Charger' :charger_swatch
+        },
       async:false
   });
 });  
