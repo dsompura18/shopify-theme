@@ -2486,6 +2486,7 @@ $('button.product-form__submit').on('click', function(){
   console.log(id);
 
       $.ajax({
+        console.log("test");
           type:'POST',
           url:'/cart/add.js',
           data:{ 
