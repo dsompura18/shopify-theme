@@ -2335,31 +2335,22 @@ function removeVariant() {
     $('.back-bg').hide();
   }
 
-  if ($('input[name="properties[Frame]"]').is(':checked')) {
-    val.push("Frame");
-  }
+  // if ($('input[name="properties[Frame]"]').is(':checked')) {
+  //   val.push("Frame");
+  // }
 
-  if ($('input[name="properties[Camera]"]').is(':checked')) {
-    val.push("Camera");
-  }
+  // if ($('input[name="properties[Camera]"]').is(':checked')) {
+  //   val.push("Camera");
+  // }
 
-  if ($('input[name="properties[Lens]"]').is(':checked')) {
-    val.push("Lens");
-  }
+  // if ($('input[name="properties[Lens]"]').is(':checked')) {
+  //   val.push("Lens");
+  // }
 
-  if ($('input[name="properties[Charger]"]').is(':checked')) {
-    val.push("Charger");
-  }
+  // if ($('input[name="properties[Charger]"]').is(':checked')) {
+  //   val.push("Charger");
+  // }
 
-
-  val = val.join('+');
-
-  console.log(val);
-  if(val.length !== 0){
-   $('variant-radios').find(`input[value="${val}"]`).click();
-  }else{
-   $('variant-radios').find(`input[value="null"]`).click();
-  }
 }
   
 $('.swatch-back').on('click', function(){
@@ -2476,6 +2467,7 @@ $(window).on("load", function () {
 $('.deselect-swatch').on('click', function(){
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
    getVariant();
+   removeVariant(); 
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`)
      
     // var variant = $(this).data('var');
