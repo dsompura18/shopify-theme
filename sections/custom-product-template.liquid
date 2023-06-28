@@ -2478,7 +2478,7 @@ $('.deselect-swatch').on('click', function(){
 
 $('button.product-form__submit').on('click', function(){
   var id= $('.product-variant-id').val();
-  var swatch_name = 
+  var swatch_name = $('.texture-swatch-input').data('swatch');
   $.ajax({
       type: 'POST',
       url: '/cart/add.js',
