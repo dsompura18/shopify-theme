@@ -2485,7 +2485,7 @@ $('button.product-form__submit').on('click', function(){
       charger_swatch = $('.swatch-charger').data('swatch');
       $.ajax({
           type: 'POST',
-          url: '/cart/add.js',
+          url: '/cart/update.js',
           data: { quantity: 1, id: id },
           body:JSON.stringify({
             attributes: {
