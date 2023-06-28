@@ -2477,23 +2477,23 @@ $('.deselect-swatch').on('click', function(){
 });  
 
 $('button.product-form__submit').on('click', function(){
-  var id= $('.product-variant-id').val(),
-   back_swatch = $('.swatch-back').data('swatch'),
-    frame_swatch = $('.swatch-frame').data('swatch'),
-     camera_swatch = $('.swatch-camera').data('swatch'),
-     lens_swatch = $('.swatch-lens').data('swatch'),
-     charger_swatch = $('.swatch-charger').data('swatch');
-  $.ajax({
-      type: 'POST',
-      url: '/cart/add.js',
-        data: { quantity: 1, id: id },
-        properties: { 
-          'Back' :back_swatch,
-           'Frame' :frame_swatch,
-           'Camera' :camera_swatch,
-           'Lens' :lens_swatch,
-           'Charger' :charger_swatch
-        }
-  });
+      var id= $('.product-variant-id').val(),
+      back_swatch = $('.swatch-back').data('swatch'),
+      frame_swatch = $('.swatch-frame').data('swatch'),
+      camera_swatch = $('.swatch-camera').data('swatch'),
+      lens_swatch = $('.swatch-lens').data('swatch'),
+      charger_swatch = $('.swatch-charger').data('swatch');
+      $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          data: { quantity: 1, id: id },
+          properties: { 
+            'Back' :back_swatch,
+             'Frame' :frame_swatch,
+             'Camera' :camera_swatch,
+             'Lens' :lens_swatch,
+             'Charger' :charger_swatch
+          }
+      });
 });  
 </script>
