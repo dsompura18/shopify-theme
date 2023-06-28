@@ -2486,7 +2486,9 @@ $('button.product-form__submit').on('click', function(){
       $.ajax({
           type: 'POST',
           url: '/cart/add.js',
-          data: { quantity: 1, id: id },
+          data: { 
+          quantity: 1, 
+          id: id, 
           properties: { 
             'Back' :back_swatch,
              'Frame' :frame_swatch,
@@ -2494,6 +2496,7 @@ $('button.product-form__submit').on('click', function(){
              'Lens' :lens_swatch,
              'Charger' :charger_swatch
           }
+        }
       });
 });  
 </script>
