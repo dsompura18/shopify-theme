@@ -2484,9 +2484,10 @@ $('button.product-form__submit').on('click', function(){
       lens_swatch = $('.swatch-lens').data('swatch'),
       charger_swatch = $('.swatch-charger').data('swatch');
   console.log(back_swatch);
+  setTimeout(function(){
       jQuery.ajax({
           type: 'POST',
-          url: '/cart/add.js',
+          url: '/cart/update.js',
           data: { quantity: 1, id: id },
           properties: { 
             'Back':back_swatch,
@@ -2496,5 +2497,6 @@ $('button.product-form__submit').on('click', function(){
              'Charger':charger_swatch
           }
       });
+   },500); 
 });  
 </script>
