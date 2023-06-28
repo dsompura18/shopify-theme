@@ -2486,9 +2486,9 @@ $('button.product-form__submit').on('click', function(){
   console.log(id);
 
       $.ajax({
-          type: 'POST',
-          url: '/cart/update.js',
-          data: { qty:1 , id:id},
+          type:'POST',
+          url:'/cart/update.js',
+          data:{ qty:1 , id:id},
           properties: { 
              'Back':back_swatch,
              'Frame':frame_swatch,
