@@ -2476,29 +2476,29 @@ $('.deselect-swatch').on('click', function(){
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`);
 });  
 
-$('button.product-form__submit').on('click', function(){
-      var id= $('.product-variant-id').val(),
-      back_swatch = $('.swatch-back').data('swatch'),
-      frame_swatch = $('.swatch-frame').data('swatch'),
-      camera_swatch = $('.swatch-camera').data('swatch'),
-      lens_swatch = $('.swatch-lens').data('swatch'),
-      charger_swatch = $('.swatch-charger').data('swatch');
-  console.log(id);
+// $('button.product-form__submit').on('click', function(){
+//       var id= $('.product-variant-id').val(),
+//       back_swatch = $('.swatch-back').data('swatch'),
+//       frame_swatch = $('.swatch-frame').data('swatch'),
+//       camera_swatch = $('.swatch-camera').data('swatch'),
+//       lens_swatch = $('.swatch-lens').data('swatch'),
+//       charger_swatch = $('.swatch-charger').data('swatch');
+//   console.log(id);
 
-      $.ajax({
-          type:'POST',
-          url:'/cart/add.js',
-          data:{ 
-            qty:1,
-            id:id
-          },
-          properties:{ 
-             'Back':back_swatch,
-             'Frame':frame_swatch,
-             'Camera':camera_swatch,
-             'Lens':lens_swatch,
-             'Charger':charger_swatch
-          }
-      });
-});  
+//       $.ajax({
+//           type:'POST',
+//           url:'/cart/add.js',
+//           data:{ 
+//             qty:1,
+//             id:id
+//           },
+//           properties:{ 
+//              'Back':back_swatch,
+//              'Frame':frame_swatch,
+//              'Camera':camera_swatch,
+//              'Lens':lens_swatch,
+//              'Charger':charger_swatch
+//           }
+//       });
+// });  
 </script>
