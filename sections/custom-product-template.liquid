@@ -2484,23 +2484,36 @@ $('button.product-form__submit').on('click', function(){
       lens_swatch = $('.swatch-lens').data('swatch'),
       charger_swatch = $('.swatch-charger').data('swatch');
       console.log(id);
-      $.ajax({
-          type:'POST',
-          url:'/cart/add.js',
-          data:{ 
-            qty:1,
-            id:id,
-            properties:{ 
-             'Back':back_swatch,
-             'Frame':frame_swatch,
-             'Camera':camera_swatch,
-             'Lens':lens_swatch,
-             'Charger':charger_swatch
-            } 
-          },
-          success(data){
-             console.log("test");
-          }
-      });
+
+       jQuery.post(window.Shopify.routes.root + 'cart/update.js', {
+        attributes: {
+          Apartment: "False", 
+          AccessCode : "",
+           Back:back_swatch,
+           Frame:frame_swatch,
+           Camera:camera_swatch,
+           Lens:lens_swatch,
+           Charger:charger_swatch
+        }
+
+
+      // $.ajax({
+      //     type:'POST',
+      //     url:'/cart/add.js',
+      //     data:{ 
+      //       qty:1,
+      //       id:id,
+      //       properties:{ 
+      //        'Back':back_swatch,
+      //        'Frame':frame_swatch,
+      //        'Camera':camera_swatch,
+      //        'Lens':lens_swatch,
+      //        'Charger':charger_swatch
+      //       } 
+      //     },
+      //     success(data){
+      //        console.log("test");
+      //     }
+      // });
 });  
 </script>
