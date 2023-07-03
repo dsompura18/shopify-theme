@@ -2294,23 +2294,23 @@ function getVariant(){
   // Picks up changes in the individual radio buttons.
 
 
-  if ($('input[name="properties[Back]"]').is(':checked')) {
+  if ($('input.swatch-back').is(':checked')) {
     val.push("Back");
   }
 
-  if ($('input[name="properties[Frame]"]').is(':checked')) {
+  if ($('input.swatch-frame').is(':checked')) {
     val.push("Frame");
   }
 
-  if ($('input[name="properties[Camera]"]').is(':checked')) {
+  if ($('input.swatch-camera"]').is(':checked')) {
     val.push("Camera");
   }
 
-  if ($('input[name="properties[Lens]"]').is(':checked')) {
+  if ($('input.swatch-lens"]').is(':checked')) {
     val.push("Lens");
   }
 
-  if ($('input[name="properties[Charger]"]').is(':checked')) {
+  if ($('input.swatch-charger"]').is(':checked')) {
     val.push("Charger");
   }
 
@@ -2335,23 +2335,23 @@ function removeVariant() {
   // Picks up changes in the individual radio buttons.
 
 
-  if (!$('input[name="properties[Back]"]').is(':checked')) {
+  if (!$('input.swatch-back"]').is(':checked')) {
     $('.back-bg').hide();
   }
 
-  if (!$('input[name="properties[Frame]"]').is(':checked')) {
+  if (!$('input.swatch-frame"]').is(':checked')) {
      $('.frame-bg').hide();
   }
 
-  if (!$('input[name="properties[Camera]"]').is(':checked')) {
+  if (!$('input.swatch-camera"]').is(':checked')) {
      $('.camera-bg').hide();
   }
 
-  if (!$('input[name="properties[Lens]"]').is(':checked')) {
+  if (!$('input.swatch-lens"]').is(':checked')) {
      $('.lens-bg').hide();
   }
 
-  if (!$('input[name="properties[Charger]"]').is(':checked')) {
+  if (!$('input.swatch-charger"]').is(':checked')) {
      $('.charger-bg').hide();
   }
 
