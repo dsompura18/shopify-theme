@@ -2487,11 +2487,11 @@ $('button.product-form__submit').on('click', function(){
 
       $.ajax({
           type:'POST',
-          url:'/cart/add.js',
+          url:'/cart/update.js',
           body: JSON.stringify({
               id: id,
               quantity: 1,
-              properties: { 
+              attributes: { 
              'Back':back_swatch,
              'Frame':frame_swatch,
              'Camera':camera_swatch,
