@@ -368,10 +368,11 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             </div>
             {%- when 'buy_buttons' -%}
-            sasa
-  
-              {%- render 'new_buy_btn', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
-            {%- when 'rating' -%}
+            {% comment %}
+                  {%- render 'new_buy_btn', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+            {% endcomment %}    
+          <button id="new_add_cart" class="btn">Add to cart</button>
+        {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
                   assign rating_decimal = 0
@@ -2478,7 +2479,7 @@ $('.deselect-swatch').on('click', function(){
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`);
 });  
 
-$('button.product-form__submit').on('click', function(){
+$('#new_add_cart').on('click', function(){
       var id= $('.product-variant-id').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
       var frame_swatch = $('input.swatch-frame:checked').data('swatch');
