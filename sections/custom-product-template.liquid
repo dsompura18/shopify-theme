@@ -2480,7 +2480,7 @@ $('.deselect-swatch').on('click', function(){
 });  
 
 $('#new_add_cart').on('click', function(){
-      var id= $('.product-variant-id').val();
+      var id= $('form.installment').find('input[name=id]').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
       var frame_swatch = $('input.swatch-frame:checked').data('swatch');
       var camera_swatch = $('input.swatch-camera:checked').data('swatch');
