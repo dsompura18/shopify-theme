@@ -2479,12 +2479,12 @@ $('.deselect-swatch').on('click', function(){
 });  
 
 $('button.product-form__submit').on('click', function(){
-      var id= $('.product-variant-id').val(),
-      back_swatch = $('.swatch-back').data('swatch'),
-      frame_swatch = $('.swatch-frame').data('swatch'),
-      camera_swatch = $('.swatch-camera').data('swatch'),
-      lens_swatch = $('.swatch-lens').data('swatch'),
-      charger_swatch = $('.swatch-charger').data('swatch');
+      var id= $('.product-variant-id').val();
+      var back_swatch = $('.swatch-back').data('swatch');
+      var frame_swatch = $('.swatch-frame').data('swatch');
+      var camera_swatch = $('.swatch-camera').data('swatch');
+      var lens_swatch = $('.swatch-lens').data('swatch');
+      var charger_swatch = $('.swatch-charger').data('swatch');
   console.log(id);
       $.ajax({
           type:'POST',
