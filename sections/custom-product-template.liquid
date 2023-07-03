@@ -371,7 +371,9 @@
             {% comment %}
                   {%- render 'new_buy_btn', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {% endcomment %}    
-          <button id="new_add_cart" class="btn">Add to cart</button>
+           <div class="custom_btn"> 
+              <button id="new_add_cart" class="btn">Add to cart</button>
+           </div>
         {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
@@ -2285,6 +2287,33 @@
 .accordion-container .deselect-swatch:hover{
   background: #ff8080;
   transition: 0.2s all ease-in;
+}
+.accordion-container .custom_btn {
+    max-width: 50%;
+    max-width: 44rem;
+}
+.accordion-container button#new_add_cart {
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 0 3rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(var(--color-button-text));
+    transition: box-shadow var(--duration-short) ease;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(var(--color-button),var(--alpha-button-background));
+    margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    line-height: calc(1 + .2 / var(--font-body-scale));
+    min-width: calc(12rem + var(--buttons-border-width) * 2);
+    min-height: calc(4.5rem + var(--buttons-border-width) * 2);
 }  
   
 </style>
