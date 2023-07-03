@@ -2559,6 +2559,11 @@ $('.deselect-swatch').on('click', function(){
 
   
 $('#new_add_cart').on('click', function(){
+    $('.spin_loader').removeClass('hidden');
+    setTimeout(function(){
+      $('.spin_loader').addClass('hidden');
+    },2000)
+
       var id= $('form.installment').find('input[name=id]').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
       var frame_swatch = $('input.swatch-frame:checked').data('swatch');
