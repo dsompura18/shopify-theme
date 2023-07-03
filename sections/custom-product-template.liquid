@@ -2315,7 +2315,10 @@ button#new_add_cart {
     min-width: calc(12rem + var(--buttons-border-width) * 2);
     min-height: calc(4.5rem + var(--buttons-border-width) * 2);
 }  
-  
+button#new_add_cart[disabled="disabled"]{
+  background-color: #998787;
+  pointer-events: none;
+}  
 </style>
 <script>
 
