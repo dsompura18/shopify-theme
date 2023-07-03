@@ -2508,6 +2508,13 @@ $('.deselect-swatch').on('click', function(){
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`);
 });  
 
+
+var dis= $('variant-radios').find('input:checked').val();
+if(dis === 'null'){
+  $('#new_add_cart').attr('disabled','disabled');
+}
+
+  
 $('#new_add_cart').on('click', function(){
       var id= $('form.installment').find('input[name=id]').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
