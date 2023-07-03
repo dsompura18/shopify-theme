@@ -2392,7 +2392,7 @@ function removeVariant() {
  $('.texture-swatch-input').on('click', function(){
 // alert("click");
     var dis = $('variant-radios').find('input:checked').val();
-   setInterval(function(){ 
+   setTimeout(function(){ 
     if(dis !== 'null'){
       $('#new_add_cart').removeAttr('disabled');
     }
