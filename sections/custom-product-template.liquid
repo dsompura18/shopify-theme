@@ -2390,10 +2390,11 @@ function removeVariant() {
 }
 
  $('.texture-swatch-input').on('click', function(){
-// alert("click");
+ console.log("click");
     var dis = $('variant-radios').find('input:checked').val();
    setTimeout(function(){ 
     if(dis !== 'null'){
+    console.log("checked");
       $('#new_add_cart').removeAttr('disabled');
     }
    },1000);  
