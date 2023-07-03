@@ -2488,7 +2488,8 @@ $('button.product-form__submit').on('click', function(){
       var lens_swatch = $('.swatch-lens').data('swatch');
       var charger_swatch = $('.swatch-charger').data('swatch');
   console.log(frame_swatch);
-      $.ajax({
+  setTimeout(function{
+        $.ajax({
           type:'POST',
           url:'/cart/add.js',
           data:{ 
@@ -2505,6 +2506,8 @@ $('button.product-form__submit').on('click', function(){
           success(data){
              console.log("test");
           }
-      });
+      });      
+  },1500);
+     
 });  
 </script>
