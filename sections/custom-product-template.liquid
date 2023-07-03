@@ -2391,8 +2391,8 @@ function removeVariant() {
 
  $('.texture-swatch-input').on('click', function(){
  console.log("click");
-    var dis = $('variant-radios').find('input:checked').val();
    setTimeout(function(){ 
+    var dis = $('variant-radios').find('input:checked').val();
     if(dis !== 'null'){
     console.log("checked");
       $('#new_add_cart').removeAttr('disabled');
