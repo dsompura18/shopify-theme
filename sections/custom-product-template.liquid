@@ -2391,11 +2391,13 @@ function removeVariant() {
 
  $('.texture-swatch-input').on('click', function(){
 alert("click");
-    var dis = $('variant-radios').find('input:checked').val(); 
+    var dis = $('variant-radios').find('input:checked').val();
+   setInterval(function(){ 
     if(dis !== 'null'){
       $('#new_add_cart').removeAttr('disabled');
     }
-  });
+   },1000);  
+});
 
 
 
