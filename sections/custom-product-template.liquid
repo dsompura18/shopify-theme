@@ -371,6 +371,7 @@
             {% comment %}
                   {%- render 'new_buy_btn', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {% endcomment %}    
+          <button class="btn">Add to cart</button>
         {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
