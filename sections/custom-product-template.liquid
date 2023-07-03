@@ -2491,13 +2491,13 @@ $('button.product-form__submit').on('click', function(){
           data:{ 
             qty:1,
             id:id,
-            attributes:{ 
+            attributes:JSON.stringify({ 
              Back:back_swatch,
              Frame:frame_swatch,
              Camera:camera_swatch,
              Lens:lens_swatch,
              Charger:charger_swatch
-            } 
+            }) 
           },
           success(data){
              console.log("test");
