@@ -373,6 +373,7 @@
             {% endcomment %}    
            <div class="custom_btn"> 
               <button id="new_add_cart" class="btn">Add to cart</button>
+              <div class="spin_loader"></div>
            </div>
         {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
