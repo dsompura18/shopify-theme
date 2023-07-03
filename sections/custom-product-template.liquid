@@ -2479,7 +2479,7 @@ $('.deselect-swatch').on('click', function(){
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`);
 });  
 
-$('button.product-form__submit').on('click', function(){
+$('#new_add_cart').on('click', function(){
       var id= $('.product-variant-id').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
       var frame_swatch = $('input.swatch-frame:checked').data('swatch');
