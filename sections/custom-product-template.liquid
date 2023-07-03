@@ -2497,6 +2497,10 @@ $('.accordion').on('click', function(){
   //on load reset all variant 
 $(window).on("load", function () {
      $('variant-radios').find(`input[value="null"]`).click();
+     var dis= $('variant-radios').find('input:checked').val(); 
+    if(dis === 'null'){
+      $('#new_add_cart').attr('disabled','disabled');
+    }
 });
 
   // code for remove unchecked swatch 
@@ -2509,7 +2513,7 @@ $('.deselect-swatch').on('click', function(){
 });  
 
 
-var dis= $('variant-radios').find('input:checked').val();
+
 if(dis === 'null'){
   $('#new_add_cart').attr('disabled','disabled');
 }
