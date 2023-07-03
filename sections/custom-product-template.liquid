@@ -2489,8 +2489,8 @@ $('button.product-form__submit').on('click', function(){
           type:'POST',
           url:'/cart/add.js',
           body: JSON.stringify({
-              id: variantId,
-              quantity: quantity,
+              id: id,
+              quantity: 1,
               properties: { 
              'Back':back_swatch,
              'Frame':frame_swatch,
