@@ -122,7 +122,7 @@
                         <label class="texture-swatch">
                           {% assign swatch_title_1 = block.settings.swatch_img_1 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
                           {% assign swatch_title_2 = block.settings.swatch_img_2 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
-                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_1 | capitalize }}" data-swatch="{{ swatch_title_1 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
+                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="" data-swatch="{{ swatch_title_1 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_1 | img_url:'master'}}" data-swatchurl="{{ block.settings.swatch_img_1 | img_url:'master'}}">
                           <img src="{{ block.settings.swatch_img_1 | img_url  }}" />
                         </label>
                         <label class="texture-swatch">
