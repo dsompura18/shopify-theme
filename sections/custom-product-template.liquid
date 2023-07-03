@@ -118,6 +118,7 @@
                     <div class="panel-body">
                       <p class="help-text-swatch" id="help-text-swatch-ctr-1">Selected texture <b></b></p>
             <form action="{{ routes.cart_url }}" method="post">
+              <p class="cart-attribute__field">
                         <label class="texture-swatch">
                           {% assign swatch_title_1 = block.settings.swatch_img_1 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
                           {% assign swatch_title_2 = block.settings.swatch_img_2 | split: '/' | last | split: '_'| first | replace:'-',' ' %}
@@ -128,6 +129,7 @@
                           <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="" value="- {{ swatch_title_2 | capitalize }}" data-swatch="{{ swatch_title_2 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
                           <img src="{{ block.settings.swatch_img_2 | img_url  }}" />
                         </label>
+              </p>
             </form>
                         <label class="deselect">
                           <div class="deselect-swatch" data-var="{{ block.settings.part_title }}">
