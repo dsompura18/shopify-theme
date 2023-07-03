@@ -2484,10 +2484,10 @@ $('button.product-form__submit').on('click', function(){
       var lens_swatch = $('input.swatch-lens:checked').data('swatch');
       var charger_swatch = $('input.swatch-charger:checked').data('swatch');
   console.log(back_swatch);
-setTimeout(function(){
+
       $.ajax({
           type:'POST',
-          url:'/cart/update.js',
+          url:'/cart/add.js',
           data:{ 
             qty:1,
             id:id,
@@ -2503,6 +2503,6 @@ setTimeout(function(){
              console.log("test");
           }
       });
-},200);
+
 });  
 </script>
