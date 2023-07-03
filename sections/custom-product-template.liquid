@@ -2487,18 +2487,18 @@ $('button.product-form__submit').on('click', function(){
 
       $.ajax({
           type:'POST',
-          url:'/cart/update.js',
-          body: JSON.stringify({
-              id: id,
-              quantity: 1,
-              attributes: { 
-             'Back':back_swatch,
-             'Frame':frame_swatch,
-             'Camera':camera_swatch,
-             'Lens':lens_swatch,
-             'Charger':charger_swatch
+          url:'/cart/add.js',
+          data:{ 
+            qty:1,
+            id:id,
+            attributes:{ 
+             Back:back_swatch,
+             Frame:frame_swatch,
+             Camera:camera_swatch,
+             Lens:lens_swatch,
+             Charger:charger_swatch
             } 
-          }),
+          },
           success(data){
              console.log("test");
           }
