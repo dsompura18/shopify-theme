@@ -2438,6 +2438,10 @@ function removeVariant() {
 
   
 $('.swatch-back').on('click', function(){
+
+   var var_type = $(this).data('swatch');  
+   $('.var_data').append(`<dl>Back: ${var_type}</dl>`);
+  
   // code for get variant name
   getVariant();
   
