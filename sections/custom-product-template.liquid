@@ -2567,6 +2567,7 @@ $('#new_add_cart').on('click', function(){
       $('.spin_loader').addClass('hidden');
     },2000)
       var img_src = $('.product-mock-up').attr('src');
+      var pr_name = $('.product-single__title').text();
       var id= $('form.installment').find('input[name=id]').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
       var frame_swatch = $('input.swatch-frame:checked').data('swatch');
@@ -2594,7 +2595,7 @@ $('#new_add_cart').on('click', function(){
           }
       });
       setTimeout(function(){  
-       $('#cart-notification-product').html("<div class='cart-notification-product__image global-media-settings'><img src='//cdn.shopify.com/s/files/1/0576/2088/9661/products/dark-wall-bedside-table_925x_7ae953e5-7d26-4923-9814-47219c93260b.jpg?v=1657187443&amp;width=140' width='70' height='47' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>Bedside Table</h3> <dl></dl></div>")
+       $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' height='47' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3> <dl></dl></div>`)
        $('#cart-notification').addClass('active');
      },2000);    
  }); 
