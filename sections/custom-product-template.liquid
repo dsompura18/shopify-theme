@@ -372,7 +372,7 @@
                   {%- render 'new_buy_btn', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {% endcomment %}    
            <div class="custom_btn"> 
-              <button id="new_add_cart" class="btn" type="button" data-qt="{{ cart.item_count }}">Add to cart</button>
+              <button id="new_add_cart" class="btn" type="button" data-qty="{{ cart.item_count }}">Add to cart</button>
               <div class="spin_loader hidden">
                 <div class="loading-overlay__spinner">
                   <svg
