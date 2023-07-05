@@ -2362,6 +2362,8 @@ function getVariant(){
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
+    var var_type = $(this).data('swatch');  
+    $('.var_data').append('Back',var_type);
   }
 
   if ($('input[name="properties[Frame]"]').is(':checked')) {
