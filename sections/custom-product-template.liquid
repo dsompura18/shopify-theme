@@ -124,7 +124,7 @@
                           <img src="{{ block.settings.swatch_img_1 | img_url  }}" />
                         </label>
                         <label class="texture-swatch">
-                          <input type="radio" class="texture-swatch-input swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_2 | capitalize }}" data-swatch="{{ swatch_title_2 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
+                          <input type="radio" class="texture-swatch-input {{ item.key }} swatch-{{ block.settings.part_title | downcase }}" name="properties[{{ block.settings.part_title }}]" value="- {{ swatch_title_2 | capitalize }}" data-swatch="{{ swatch_title_2 | capitalize }}" data-var="{{ block.settings.part_title }}" data-imgurl="{{ block.settings.swatch_banner_img_2 | img_url:'master' }}" data-swatchurl="{{ block.settings.swatch_img_2 | img_url:'master'}}">
                           <img src="{{ block.settings.swatch_img_2 | img_url  }}" />
                         </label>
                         <label class="deselect">
@@ -2594,9 +2594,13 @@ $('#new_add_cart').on('click', function(){
           }
       });
       setTimeout(function(){  
+      
        $('#cart-notification').addClass('active');
      },2000);    
 
 }); 
-          
+      <div class="cart-notification-product__image global-media-settings">
+          <img src="//cdn.shopify.com/s/files/1/0576/2088/9661/products/dark-wall-bedside-table_925x_7ae953e5-7d26-4923-9814-47219c93260b.jpg?v=1657187443&amp;width=140" alt="" width="70" height="47" loading="lazy">
+        </div><div><h3 class="cart-notification-product__name h4">Bedside Table</h3>
+        <dl></dl></div>    
 </script>
