@@ -2563,6 +2563,12 @@ $('.deselect-swatch').on('click', function(){
   
 $('#new_add_cart').on('click', function(){
 
+    jQuery.getJSON('/cart.js', function (cart) {
+      var count = cart.item_count;
+      console.log(count);
+    });
+  
+  
     $('.spin_loader').removeClass('hidden');
     setTimeout(function(){
       $('.spin_loader').addClass('hidden');
