@@ -2566,7 +2566,7 @@ $('#new_add_cart').on('click', function(){
     setTimeout(function(){
       $('.spin_loader').addClass('hidden');
     },2000)
-
+      var img_src = $('.product-mock-up').attr('src');
       var id= $('form.installment').find('input[name=id]').val();
       var back_swatch = $('input.swatch-back:checked').data('swatch');
       var frame_swatch = $('input.swatch-frame:checked').data('swatch');
