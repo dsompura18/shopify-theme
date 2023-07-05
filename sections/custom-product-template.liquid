@@ -2599,11 +2599,11 @@ $('#new_add_cart').on('click', function(){
        $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3> <dl></dl></div>`);
        $('#cart-notification-button').text(`View my cart()`) 
        $('#cart-notification').addClass('active');
+       jQuery.getJSON('/cart.js', function (cart) {
+        var count = cart.item_count;
+        console.log(count); 
      },2000); 
-  
-      jQuery.getJSON('/cart.js', function (cart) {
-      var count = cart.item_count;
-      console.log(count);
+
     }); 
  }); 
       // <div class="cart-notification-product__image global-media-settings">
