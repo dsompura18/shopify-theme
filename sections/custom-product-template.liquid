@@ -372,7 +372,7 @@
                   {%- render 'new_buy_btn', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {% endcomment %}    
            <div class="custom_btn"> 
-              <button id="new_add_cart" class="btn" type="button">Add to cart</button>
+              <button id="new_add_cart" class="btn" type="button" data-qt="{{ cart.item_count }}">Add to cart</button>
               <div class="spin_loader hidden">
                 <div class="loading-overlay__spinner">
                   <svg
@@ -2595,7 +2595,8 @@ $('#new_add_cart').on('click', function(){
           }
       });
       setTimeout(function(){  
-       $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3> <dl></dl></div>`)
+       $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3> <dl></dl></div>`);
+       $('#cart-notification-button').text(`View my cart(${})`) 
        $('#cart-notification').addClass('active');
      },2000);    
  }); 
