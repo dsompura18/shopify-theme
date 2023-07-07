@@ -2679,22 +2679,27 @@ $('.deselect-swatch').on('click', function(){
    $(this).parents('.accordion-wrapper').find('.selected-swatch').css('background-image',`url(https://cdn.shopify.com/s/files/1/1684/4603/files/plus-sign.png?23698)`);
 });  
 
-  
+ // send item by ajax method on btn click 
 $('#new_add_cart').on('click', function(){
-console.log(`arr:${newarr}`);
-    $('.spin_loader').removeClass('hidden');
-    setTimeout(function(){
-      $('.spin_loader').addClass('hidden');
-    },1000);
-      var img_src = $('.product__media img').attr('src');
-      var pr_name = $('.product__title h1').text();
-      var id= $('form.installment').find('input[name=id]').val();
-      var back_swatch = $('input.swatch-back:checked').data('swatch');
-      var frame_swatch = $('input.swatch-frame:checked').data('swatch');
-      var camera_swatch = $('input.swatch-camera:checked').data('swatch');
-      var lens_swatch = $('input.swatch-lens:checked').data('swatch');
-      var charger_swatch = $('input.swatch-charger:checked').data('swatch');
-       console.log(back_swatch);
+// console.log(`arr:${newarr}`);
+  
+// code for loader of btn
+$('.spin_loader').removeClass('hidden');
+setTimeout(function(){
+  $('.spin_loader').addClass('hidden');
+},1000);
+  
+var img_src = $('.product__media img').attr('src');
+var pr_name = $('.product__title h1').text();
+var id= $('form.installment').find('input[name=id]').val();
+
+// attributes for line item 
+var back_swatch = $('input.swatch-back:checked').data('swatch');
+var frame_swatch = $('input.swatch-frame:checked').data('swatch');
+var camera_swatch = $('input.swatch-camera:checked').data('swatch');
+var lens_swatch = $('input.swatch-lens:checked').data('swatch');
+var charger_swatch = $('input.swatch-charger:checked').data('swatch');
+ // console.log(back_swatch);
 
       $.ajax({
           type:'POST',
