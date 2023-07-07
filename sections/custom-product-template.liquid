@@ -2442,9 +2442,10 @@ $('.swatch-back').on('click', function(){
    var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
   var res = `${type}: ${var_type}` 
-  console.log(res);
+
   
-  newarr.push
+  newarr.push(res);
+  console.log(newarr);
   // code for get variant name
   getVariant();
   
