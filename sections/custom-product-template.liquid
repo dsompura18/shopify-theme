@@ -2362,7 +2362,7 @@ var newarr=[];
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
-    var var_type = $(this).data('swatch'); 
+    var var_type = $('.swatch-back').data('swatch'); 
     var res = `"Back": ${var_type}`;
     newarr.push(res); 
     console.log(newarr);
