@@ -2467,6 +2467,11 @@ $('.swatch-back').on('click', function(){
 
   
 $('.swatch-frame').on('click', function(){
+      var var_type = $(this).data('swatch');  
+   var type= $(this).data('var');
+  var res = `${type}: ${var_type}` 
+
+  
   // code for get variant name
   getVariant();
   
