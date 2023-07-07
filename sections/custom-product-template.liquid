@@ -2675,6 +2675,8 @@ $('.deselect-swatch').on('click', function(){
   console.log('remove!');
   console.log(newarr);
   var newone = newarr.join(',');
+  var sel_var = $(this).parents('.deselect').siblings('.texture-swatch').find('input:checked').data('swatch');
+  console.log(sel_var);
   if(newone.indexOf('Back') > -1){
    console.log(newarr.indexOf('Back'));
     // newarr.splice(,1)
