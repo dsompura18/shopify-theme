@@ -2356,12 +2356,12 @@ button#new_add_cart[disabled="disabled"]{
 function getVariant(){
   // var optionIndex = $(this).closest('.accordion-container').attr('data-option-index');
   var val = [];
+
   // Picks up changes in the individual radio buttons.
 
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
-    var var_type = $(this).data('swatch');  
   }
 
   if ($('input[name="properties[Frame]"]').is(':checked')) {
@@ -2443,7 +2443,7 @@ $('.swatch-back').on('click', function(){
    var type= $(this).data('var');
   var res = `${type}: ${var_type}` 
 
-  newarr.splice(0, 1, res);
+  newarr.splice(0, 0, res);
   console.log(newarr);
 
   // code for get variant name
