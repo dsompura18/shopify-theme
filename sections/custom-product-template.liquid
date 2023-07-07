@@ -2482,8 +2482,10 @@ $('.swatch-frame').on('click', function(){
 if(newone.indexOf('Frame') > -1){
   alert("exist");
    if(newarr.length > 0){
+    alert(">1")
     newarr.splice(1, 1, res);
    }else{
+     alert("!>1")
       newarr.splice(0, 1, res);
    }
 }else{
