@@ -2709,7 +2709,7 @@ console.log(`arr:${newarr}`);
         console.log(count); 
        $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3><div class="var_data"></div></div>`);
        $('#cart-notification-button').text(`View my cart(${count})`); 
-       for(var i =1; i<=newarr.length; i++){
+       for(var i =0; i<newarr.length; i++){
         console.log(i);
          $('#cart-notification-product .var_data').append(`<p>${newarr[i]}</p>`);
         }
