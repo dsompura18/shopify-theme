@@ -2675,12 +2675,12 @@ $('.deselect-swatch').on('click', function(){
   console.log('remove!');
   console.log(newarr);
   var newone = newarr.join(',');
+  var sel_cat = $(this).data('var');
   var sel_var = $(this).parents('.deselect').siblings('.texture-swatch').find('input:checked').data('swatch');
   console.log(sel_var);
-  if(newone.indexOf('Back') > -1){
-   console.log(newarr.indexOf('Back'));
+   console.log(newarr.indexOf(`${sel_cat}:${sel_var}`));
     // newarr.splice(,1)
-  }
+  
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
    getVariant();
    removeVariant(); 
