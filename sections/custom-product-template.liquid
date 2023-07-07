@@ -2441,8 +2441,8 @@ $('.swatch-back').on('click', function(){
 
    var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
-   var res = `${type}: ${var_type}` 
-   var newone = newarr.join(',')
+   var res = `${type}: ${var_type}`; 
+   var newone = newarr.join(',');
      
 if(newone.indexOf('Back') > -1){
   // alert("exist");
@@ -2476,8 +2476,8 @@ if(newone.indexOf('Back') > -1){
 $('.swatch-frame').on('click', function(){
    var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
-   var res = `${type}: ${var_type}` 
-   var newone = newarr.join(',')
+   var res = `${type}: ${var_type}`; 
+   var newone = newarr.join(',');
      
 if(newone.indexOf('Frame') > -1){
   // alert("exist");
@@ -2510,8 +2510,8 @@ if(newone.indexOf('Frame') > -1){
 $('.swatch-camera').on('click', function(){
    var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
-   var res = `${type}: ${var_type}` 
-   var newone = newarr.join(',')
+   var res = `${type}: ${var_type}`; 
+   var newone = newarr.join(',');
      
 if(newone.indexOf('Camera') > -1){
   // alert("exist");
@@ -2544,8 +2544,8 @@ if(newone.indexOf('Camera') > -1){
 $('.swatch-lens').on('click', function(){
  var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
-   var res = `${type}: ${var_type}` 
-   var newone = newarr.join(',')
+   var res = `${type}: ${var_type}`; 
+   var newone = newarr.join(',');
      
 if(newone.indexOf('Lens') > -1){
   // alert("exist");
@@ -2578,9 +2578,9 @@ if(newone.indexOf('Lens') > -1){
 $('.swatch-charger').on('click', function(){
  var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
-   var res = `${type}: ${var_type}` 
-   var newone = newarr.join(',')
-     
+   var res = `${type}: ${var_type}`; 
+   var newone = newarr.join(',');
+     console.log(newone); 
 if(newone.indexOf('Charger') > -1){
   // alert("exist");
   newarr.splice(4, 1, res);
