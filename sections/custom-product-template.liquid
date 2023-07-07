@@ -2481,10 +2481,18 @@ $('.swatch-frame').on('click', function(){
      
 if(newone.indexOf('Frame') > -1){
   alert("exist");
-  newarr.splice(1, 1, res);
+   if(newarr.length > 0){
+    newarr.splice(1, 1, res);
+   }else{
+      newarr.splice(0, 1, res);
+   }
 }else{
   alert("not exist");
-  newarr.splice(1, 0, res);
+   if(newarr.length > 0){
+    newarr.splice(1, 0, res);
+   }else{
+     newarr.splice(0, 0, res);
+   }
 }
   console.log(newarr);
   
