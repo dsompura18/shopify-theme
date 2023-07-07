@@ -2445,11 +2445,13 @@ $('.swatch-back').on('click', function(){
    var newone = newarr.join(',')
      
 if(newone.indexOf('Back') > -1){
-  alert("exist")
+  alert("exist");
+  newarr.splice(0, 1, res);
 }else{
   alert("not exist");
-}
   newarr.splice(0, 0, res);
+}
+  // newarr.splice(0, 0, res);
   console.log(newarr);
 
   // code for get variant name
