@@ -2710,7 +2710,7 @@ console.log(`arr:${newarr}`);
        $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3><div class="var_data"></div></div>`);
        $('#cart-notification-button').text(`View my cart(${count})`); 
        for(var i =0; i<=newarr.length; i++){
-         $('#cart-notification-product .var_data').append(`<p>${newarr[i]}</p>`);
+         $('#cart-notification-product .var_data').append(`<p>${newarr[i-1]}</p>`);
         }
        $('#cart-notification').addClass('active');
        });  
