@@ -2442,7 +2442,7 @@ $('.swatch-back').on('click', function(){
    var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
    var res = `${type}: ${var_type}` 
-if(newarr[0].indexOf("Back") > -1){
+if(newarr[0].include("Back")){
   alert("exist")
 }else{
   alert("not exist");
