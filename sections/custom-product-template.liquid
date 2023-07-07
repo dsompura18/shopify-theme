@@ -2362,12 +2362,12 @@ button#new_add_cart[disabled="disabled"]{
                           
 <script>
 
+
+  
 function getVariant(){
-  // var optionIndex = $(this).closest('.accordion-container').attr('data-option-index');
   var val = [];
 
   // Picks up changes in the individual radio buttons.
-
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
@@ -2388,7 +2388,6 @@ function getVariant(){
   if ($('input[name="properties[Charger]"]').is(':checked')) {
     val.push("Charger");
   }
-
 
   val = val.join('+');
 
