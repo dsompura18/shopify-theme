@@ -2701,38 +2701,41 @@ var lens_swatch = $('input.swatch-lens:checked').data('swatch');
 var charger_swatch = $('input.swatch-charger:checked').data('swatch');
  // console.log(back_swatch);
 
-      $.ajax({
-          type:'POST',
-          url:'/cart/add.js',
-          data:{ 
-            qty:1,
-            id:id,
-            properties:{ 
-             'Back':back_swatch,
-             'Frame':frame_swatch,
-             'Camera':camera_swatch,
-             'Lens':lens_swatch,
-             'Charger':charger_swatch
-            } 
-          },
-          success(data){
-             console.log("test");
-          }
-      });
-      setTimeout(function(){   
-       jQuery.getJSON('/cart.js', function (cart) {
-        var count = cart.item_count;
-        console.log(count); 
-       $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3><div class="var_data"></div></div>`);
-       $('#cart-notification-button').text(`View my cart(${count})`); 
-       $('.cart-count-bubble #cart_count').text(`${count}`);  
-       for(var i =0; i<newarr.length; i++){
-        console.log(i);
-         $('#cart-notification-product .var_data').append(`<p>${newarr[i]}</p>`);
-        }
-       $('#cart-notification').addClass('active');
-       });  
-     },1000); 
+$.ajax({
+    type:'POST',
+    url:'/cart/add.js',
+    data:{ 
+      qty:1,
+      id:id,
+      properties:{ 
+       'Back':back_swatch,
+       'Frame':frame_swatch,
+       'Camera':camera_swatch,
+       'Lens':lens_swatch,
+       'Charger':charger_swatch
+      } 
+    },
+    success(data){
+       console.log("test");
+    }
+});
+
+// cart get request for update cart popup and cart count 
+setTimeout(function(){   
+ jQuery.getJSON('/cart.js', function (cart) {
+  var count = cart.item_count;
+  // console.log(count); 
+ $('#cart-notification-product').html(`<div class='cart-notification-product__image global-media-settings'><img src='${img_src}' width='70' loading='lazy'></div><div><h3 class='cart-notification-product__name h4'>${pr_name}</h3><div class="var_data"></div></div>`);
+ $('#cart-notification-button').text(`View my cart(${count})`); 
+ $('.cart-count-bubble #cart_count').text(`${count}`); 
+// loop for line items property 
+ for(var i =0; i<newarr.length; i++){
+  console.log(i);
+   $('#cart-notification-product .var_data').append(`<p>${newarr[i]}</p>`);
+  }
+ $('#cart-notification').addClass('active');
+ });  
+},1000); 
 
  }); 
 </script>
