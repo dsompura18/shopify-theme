@@ -2363,7 +2363,7 @@ button#new_add_cart[disabled="disabled"]{
 <script>
 
 
-  
+// function for get combination of option 
 function getVariant(){
   var val = [];
 
@@ -2395,19 +2395,17 @@ function getVariant(){
   if(val.length !== 0){
    $('variant-radios').find(`input[value="${val}"]`).click();
   }else{
-    console.log("empty");
+    // console.log("empty");
    $('variant-radios').find(`input[value="null"]`).click();
    setTimeout(function(){ 
    $('.product-form__submit').find('span').html('Add to cart');
    },400);  
   }
 }
-  
+
+// function for remove option on delete btn
 function removeVariant() {
-  // var optionIndex = $(this).closest('.accordion-container').attr('data-option-index');
-
   // Picks up changes in the individual radio buttons.
-
 
   if (!$('input[name="properties[Back]"]').is(':checked')) {
     $('.back-bg').hide();
@@ -2431,6 +2429,7 @@ function removeVariant() {
 
 }
 
+// btn disabled when no option selected 
  $('.texture-swatch-input').on('click', function(){
  // console.log("click");
    setTimeout(function(){ 
@@ -2447,53 +2446,54 @@ var newarr=[];
   
 $('.swatch-back').on('click', function(){
 
-   var var_type = $(this).data('swatch');  
-   var type= $(this).data('var');
-   var res = `${type}: ${var_type}`; 
-   var newone = newarr.join(',');
-     
-if(newone.indexOf('Back') > -1){
+//code for get data for cart notification popup 
+var var_type = $(this).data('swatch');  
+var type= $(this).data('var');
+var res = `${type}: ${var_type}`; 
+var newone = newarr.join(',');
+  
+if(newone.indexOf('Back') > -1){ //condition for replace duplicate category option
   // alert("exist");
   newarr.splice(0, 1, res);
 }else{
   // alert("not exist");
   newarr.splice(0, 0, res);
 }
-  // newarr.splice(0, 0, res);
-  console.log(newarr);
+console.log(newarr);
 
-  // code for get variant name
-  getVariant();
-  
-  // code for change title
-  var title = $(this).val();
-  $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+// code for get variant name
+getVariant();
 
-  // code for change image of accordion
-  var thumb_img = $(this).next('img').attr('src');
-  $(this).parents('.accordion-wrapper').find('.swatch-Back').css('background-image',`url(${thumb_img})`);
-  
-  // change for main image 
-  var src = $(this).data('imgurl');
-    // console.log("back click");
-   $('.back-bg').show(); 
-   $('.back-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
+// code for change title
+var title = $(this).val();
+$(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+
+// code for change image of accordion
+var thumb_img = $(this).next('img').attr('src');
+$(this).parents('.accordion-wrapper').find('.swatch-Back').css('background-image',`url(${thumb_img})`);
+
+// change for main image 
+var src = $(this).data('imgurl');
+  // console.log("back click");
+ $('.back-bg').show(); 
+ $('.back-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
 
   
 $('.swatch-frame').on('click', function(){
-   var var_type = $(this).data('swatch');  
-   var type= $(this).data('var');
-   var res = `${type}: ${var_type}`; 
-   var newone = newarr.join(',');
+//code for get data for cart notification popup   
+var var_type = $(this).data('swatch');  
+var type= $(this).data('var');
+var res = `${type}: ${var_type}`; 
+var newone = newarr.join(',');
      
 if(newone.indexOf('Frame') > -1){
   alert(newarr.length);
-   if(newarr.length > 1){
-    alert(">1")
+   if(newarr.length > 1){ // condition for filter array length
+    // alert(">1")
     newarr.splice(1, 1, res);
    }else{
-     alert("!>1")
+     // alert("!>1")
       newarr.splice(0, 1, res);
    }
 }else{
@@ -2504,32 +2504,33 @@ if(newone.indexOf('Frame') > -1){
      newarr.splice(0, 0, res);
    }
 }
-  console.log(newarr);
+console.log(newarr);
   
-  // code for get variant name
-  getVariant();
-  
-    // code for change title
-  var title = $(this).val();
-  $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+// code for get variant name
+getVariant();
 
-  // code for change image of accordion
-  var thumb_img = $(this).next('img').attr('src');
-  $(this).parents('.accordion-wrapper').find('.swatch-Frame').css('background-image',`url(${thumb_img})`);
-  
-  // change for main image 
-   var src = $(this).data('imgurl');
-    // console.log("frame click");
-   $('.frame-bg').show(); 
-   $('.frame-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
+// code for change title
+var title = $(this).val();
+$(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+
+// code for change image of accordion
+var thumb_img = $(this).next('img').attr('src');
+$(this).parents('.accordion-wrapper').find('.swatch-Frame').css('background-image',`url(${thumb_img})`);
+
+// change for main image 
+ var src = $(this).data('imgurl');
+  // console.log("frame click");
+ $('.frame-bg').show(); 
+ $('.frame-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
 
   
 $('.swatch-camera').on('click', function(){
-   var var_type = $(this).data('swatch');  
-   var type= $(this).data('var');
-   var res = `${type}: ${var_type}`; 
-   var newone = newarr.join(',');
+//code for get data for cart notification popup 
+ var var_type = $(this).data('swatch');  
+ var type= $(this).data('var');
+ var res = `${type}: ${var_type}`; 
+ var newone = newarr.join(',');
      
 if(newone.indexOf('Camera') > -1){
   // alert("exist");
@@ -2546,32 +2547,33 @@ if(newone.indexOf('Camera') > -1){
      newarr.splice(0, 0, res);
    }
 }
-  console.log(newarr);
-        
-    // code for get variant name
-  getVariant();
-  
-   // code for change title
-  var title = $(this).val();
-  $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+console.log(newarr);
+      
+// code for get variant name
+getVariant();
 
-  // code for change image of accordion
-  var thumb_img = $(this).next('img').attr('src');
-  $(this).parents('.accordion-wrapper').find('.swatch-Camera').css('background-image',`url(${thumb_img})`);
-  
-  // change for main image
-   var src = $(this).data('imgurl');
-    // console.log("frame click");
-   $('.camera-bg').show(); 
-   $('.camera-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
+// code for change title
+var title = $(this).val();
+$(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+
+// code for change image of accordion
+var thumb_img = $(this).next('img').attr('src');
+$(this).parents('.accordion-wrapper').find('.swatch-Camera').css('background-image',`url(${thumb_img})`);
+
+// change for main image
+ var src = $(this).data('imgurl');
+// console.log("frame click");
+ $('.camera-bg').show(); 
+ $('.camera-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
 
   
 $('.swatch-lens').on('click', function(){
- var var_type = $(this).data('swatch');  
-   var type= $(this).data('var');
-   var res = `${type}: ${var_type}`; 
-   var newone = newarr.join(',');
+//code for get data for cart notification popup   
+var var_type = $(this).data('swatch');  
+var type= $(this).data('var');
+var res = `${type}: ${var_type}`; 
+var newone = newarr.join(',');
      
 if(newone.indexOf('Lens') > -1){
   // alert("exist");
@@ -2588,34 +2590,35 @@ if(newone.indexOf('Lens') > -1){
    newarr.splice(0, 0, res);
   }
 }
-  console.log(newarr);
-     
-  // code for get variant name
-  getVariant();
-  
-   // code for change title
-  var title = $(this).val();
-  $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+console.log(newarr);
+   
+// code for get variant name
+getVariant();
 
-  // code for change image of accordion
-  var thumb_img = $(this).next('img').attr('src');
-  $(this).parents('.accordion-wrapper').find('.swatch-Lens').css('background-image',`url(${thumb_img})`);
-  
-  // change for main image
-   var src = $(this).data('imgurl');
-    // console.log("frame click");
-   $('.lens-bg').show(); 
-   $('.lens-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
+ // code for change title
+var title = $(this).val();
+$(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+
+// code for change image of accordion
+var thumb_img = $(this).next('img').attr('src');
+$(this).parents('.accordion-wrapper').find('.swatch-Lens').css('background-image',`url(${thumb_img})`);
+
+// change for main image
+ var src = $(this).data('imgurl');
+  // console.log("frame click");
+ $('.lens-bg').show(); 
+ $('.lens-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
 
   
 $('.swatch-charger').on('click', function(){
- var var_type = $(this).data('swatch');  
-   var type= $(this).data('var');
-   var res = `${type}: ${var_type}`; 
-   var newone = newarr.join(',');
-     console.log(newone); 
-if(newone.indexOf('Charger') > -1){
+//code for get data for cart notification popup   
+var var_type = $(this).data('swatch');  
+var type= $(this).data('var');
+var res = `${type}: ${var_type}`; 
+var newone = newarr.join(',');
+// console.log(newone); 
+if(newone.indexOf('Charger') > -1){ 
   // alert("exist");
   if(newarr.length > 4){
    newarr.splice(4, 1, res);
@@ -2634,22 +2637,22 @@ if(newone.indexOf('Charger') > -1){
   console.log(newarr);
 
   
-  // code for get variant name
-  getVariant();
-  
-   // code for change title
-  var title = $(this).val();
-  $(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+// code for get variant name
+getVariant();
 
-  // code for change image of accordion
-  var thumb_img = $(this).next('img').attr('src');
-  $(this).parents('.accordion-wrapper').find('.swatch-Charger').css('background-image',`url(${thumb_img})`);
-  
-  // change for main image
- var src = $(this).data('imgurl');
-  // console.log("frame click");
- $('.charger-bg').show(); 
- $('.charger-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
+ // code for change title
+var title = $(this).val();
+$(this).parents('.panel-body').find('.help-text-swatch b').text(title);
+
+// code for change image of accordion
+var thumb_img = $(this).next('img').attr('src');
+$(this).parents('.accordion-wrapper').find('.swatch-Charger').css('background-image',`url(${thumb_img})`);
+
+// change for main image
+var src = $(this).data('imgurl');
+// console.log("frame click");
+$('.charger-bg').show(); 
+$('.charger-bg').css({'background-image':`url(${src})`,'background-size':'contain', 'width':'100%','height':'100%'}); 
 });
   
 //accordion code 
@@ -2658,7 +2661,7 @@ $('.accordion').on('click', function(){
     $(this).parents('.accordion-container').siblings().find('.panel_box').slideUp();
 });
 
-  //on load reset all variant 
+//on load reset all variant 
 $(window).on("load", function () {
      $('variant-radios').find(`input[value="null"]`).click();
     var dis = $('variant-radios').find('input:checked').val(); 
@@ -2667,7 +2670,7 @@ $(window).on("load", function () {
     }
 });
 
-  // code for remove unchecked swatch 
+// code for remove unchecked swatch 
 $('.deselect-swatch').on('click', function(){
   console.log('remove!');
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
