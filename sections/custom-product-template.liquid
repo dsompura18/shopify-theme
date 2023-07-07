@@ -2445,10 +2445,10 @@ $('.swatch-back').on('click', function(){
    var newone = newarr.join(',')
      
 if(newone.indexOf('Back') > -1){
-  alert("exist");
+  // alert("exist");
   newarr.splice(0, 1, res);
 }else{
-  alert("not exist");
+  // alert("not exist");
   newarr.splice(0, 0, res);
 }
   // newarr.splice(0, 0, res);
@@ -2474,10 +2474,18 @@ if(newone.indexOf('Back') > -1){
 
   
 $('.swatch-frame').on('click', function(){
-      var var_type = $(this).data('swatch');  
+   var var_type = $(this).data('swatch');  
    var type= $(this).data('var');
-  var res = `${type}: ${var_type}` 
-newarr.splice(1, 1, res);
+   var res = `${type}: ${var_type}` 
+   var newone = newarr.join(',')
+     
+if(newone.indexOf('Back') > -1){
+  // alert("exist");
+  newarr.splice(1, 1, res);
+}else{
+  // alert("not exist");
+  newarr.splice(1, 0, res);
+}
   console.log(newarr);
   
   // code for get variant name
@@ -2500,6 +2508,20 @@ newarr.splice(1, 1, res);
 
   
 $('.swatch-camera').on('click', function(){
+   var var_type = $(this).data('swatch');  
+   var type= $(this).data('var');
+   var res = `${type}: ${var_type}` 
+   var newone = newarr.join(',')
+     
+if(newone.indexOf('Back') > -1){
+  // alert("exist");
+  newarr.splice(2, 1, res);
+}else{
+  // alert("not exist");
+  newarr.splice(2, 0, res);
+}
+  console.log(newarr);
+        
     // code for get variant name
   getVariant();
   
