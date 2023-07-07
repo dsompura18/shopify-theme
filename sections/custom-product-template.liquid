@@ -2680,6 +2680,7 @@ $('.deselect-swatch').on('click', function(){
   var sel_res = `${sel_cat}: ${sel_var}`;  
 console.log(sel_res);
    var ind = newarr.indexOf(sel_res);
+   console.log(ind);
    newarr.splice(ind,1);
   
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
