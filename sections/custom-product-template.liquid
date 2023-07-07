@@ -2542,6 +2542,20 @@ if(newone.indexOf('Camera') > -1){
 
   
 $('.swatch-lens').on('click', function(){
+ var var_type = $(this).data('swatch');  
+   var type= $(this).data('var');
+   var res = `${type}: ${var_type}` 
+   var newone = newarr.join(',')
+     
+if(newone.indexOf('Lens') > -1){
+  // alert("exist");
+  newarr.splice(3, 1, res);
+}else{
+  // alert("not exist");
+  newarr.splice(3, 0, res);
+}
+  console.log(newarr);
+     
   // code for get variant name
   getVariant();
   
@@ -2562,6 +2576,21 @@ $('.swatch-lens').on('click', function(){
 
   
 $('.swatch-charger').on('click', function(){
+ var var_type = $(this).data('swatch');  
+   var type= $(this).data('var');
+   var res = `${type}: ${var_type}` 
+   var newone = newarr.join(',')
+     
+if(newone.indexOf('Charger') > -1){
+  // alert("exist");
+  newarr.splice(4, 1, res);
+}else{
+  // alert("not exist");
+  newarr.splice(4, 0, res);
+}
+  console.log(newarr);
+
+  
   // code for get variant name
   getVariant();
   
