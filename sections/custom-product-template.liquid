@@ -2356,12 +2356,15 @@ button#new_add_cart[disabled="disabled"]{
 function getVariant(){
   // var optionIndex = $(this).closest('.accordion-container').attr('data-option-index');
   var val = [];
-
+var newarr=[];
   // Picks up changes in the individual radio buttons.
 
 
   if ($('input[name="properties[Back]"]').is(':checked')) {
     val.push("Back");
+    var var_type = $(this).data('swatch'); 
+    var res = `${type}: ${var_type}`;
+    newarr.push(res); 
   }
 
   if ($('input[name="properties[Frame]"]').is(':checked')) {
