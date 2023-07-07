@@ -2567,17 +2567,17 @@ $('.swatch-lens').on('click', function(){
      
 if(newone.indexOf('Lens') > -1){
   // alert("exist");
-  if(newarr.length > 1){
+  if(newarr.length > 3){
    newarr.splice(3, 1, res);
   }else{
    newarr.splice(0, 1, res);
   }
 }else{
   // alert("not exist");
-  if(newarr.length > 1){
+  if(newarr.length > 3){
    newarr.splice(3, 0, res);
   }else{
-   newarr.splice(0, 1, res);
+   newarr.splice(0, 0, res);
   }
 }
   console.log(newarr);
@@ -2609,7 +2609,7 @@ $('.swatch-charger').on('click', function(){
      console.log(newone); 
 if(newone.indexOf('Charger') > -1){
   // alert("exist");
-  if(newarr.length > 2){
+  if(newarr.length > 4){
    newarr.splice(4, 1, res);
   }else{
    newarr.splice(0, 1, res);
@@ -2617,7 +2617,7 @@ if(newone.indexOf('Charger') > -1){
   
 }else{
   // alert("not exist");
-  if(newarr.length > 2){
+  if(newarr.length > 4){
     newarr.splice(4, 0, res);
   }else{
     newarr.splice(0, 0, res); 
