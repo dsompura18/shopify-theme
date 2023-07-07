@@ -2677,8 +2677,9 @@ $('.deselect-swatch').on('click', function(){
   var newone = newarr.join(',');
   var sel_cat = $(this).data('var');
   var sel_var = $(this).parents('.deselect').siblings('.texture-swatch').find('input:checked').data('swatch');
-  console.log(sel_var);
-   console.log(newarr.indexOf(`${sel_cat}:${sel_var}`));
+  var sel_res = `${sel_cat}:${sel_var}`;  
+// console.log(sel_var);
+   console.log(newarr.indexOf(sel_res));
     // newarr.splice(,1)
   
    $(this).parents('.deselect').siblings('.texture-swatch').find('input').prop('checked', false); 
