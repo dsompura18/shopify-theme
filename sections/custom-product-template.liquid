@@ -2522,7 +2522,11 @@ if(newone.indexOf('Camera') > -1){
   }
 }else{
   // alert("not exist");
+   if(newarr.length > 1){
   newarr.splice(2, 0, res);
+   }else{
+     newarr.splice(0, 0, res);
+   }
 }
   console.log(newarr);
         
