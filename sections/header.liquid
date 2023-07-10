@@ -399,9 +399,9 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-      {{ localization.language }}
+    
        {%- for language in localization.available_languages -%}
-
+  {{ localization.language }}
             <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if section.settings.logo_en != blank -%}
               {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
