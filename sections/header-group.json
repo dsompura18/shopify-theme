@@ -24,6 +24,8 @@
     "header": {
       "type": "header",
       "settings": {
+        "logo_ch": "shopify:\/\/shop_images\/3034007-inline-i-applelogo.webp",
+        "logo_gm": "shopify:\/\/shop_images\/images.png",
         "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "main-menu",
