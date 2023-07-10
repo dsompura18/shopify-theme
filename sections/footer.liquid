@@ -250,7 +250,7 @@
           </localization-form>
         {%- endif -%}
          {% endcomment %}
-        {% for lang in localization.language %}
+        {% for lang in localization.available_languages %}
          {{ lang }}
            {% endfor %}
          {% if localization.available_languages.size > 1 %}
