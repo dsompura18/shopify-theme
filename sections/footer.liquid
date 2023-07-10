@@ -205,6 +205,7 @@
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
+        {% comment %}
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
             {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
@@ -248,6 +249,7 @@
             {%- endform -%}
           </localization-form>
         {%- endif -%}
+         {% endcomment %}
          {% if localization.available_languages.size > 1 %}
            hjs hjsd jsh
   <localization-form>
