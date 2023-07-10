@@ -2427,7 +2427,7 @@ function removeVariant() {
 }
 
 // btn disabled when no option selected 
- $('.texture-swatch-input').on('click', function(){
+ $('.texture-swatch-input, .deselect-swatch').on('click', function(){
  // console.log("click");
    setTimeout(function(){ 
     var dis = $('variant-radios').find('input:checked').val();
