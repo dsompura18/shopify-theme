@@ -2435,6 +2435,8 @@ function removeVariant() {
     if(dis !== 'null'){
     // console.log("checked");
       $('#new_add_cart').removeAttr('disabled');
+    }else{
+      $('#new_add_cart').addAttr('disabled');
     }
    },1000);  
 });
