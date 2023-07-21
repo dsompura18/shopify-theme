@@ -1,12 +1,16 @@
+{% for item in section.settings.products_per_page %}
+<div class="test">{{ item }}</div>
+{% endfor %}
 {% schema %}
   {
     "name": "Sample",
     "settings": [
       {
-        "type": "number",
+        "type": "text",
         "id": "products_per_page",
-        "label": "Products per page"
+        "label": "Heading"
       }
+
     ],
     "presets":[
       {
