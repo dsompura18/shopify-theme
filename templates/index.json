@@ -76,6 +76,7 @@
     },
     "3b6f981c-eb87-40f8-8829-9f714fd9bad5": {
       "type": "roulette-wheel",
+      "disabled": true,
       "settings": {
       }
     },
@@ -124,7 +125,7 @@
       "type": "apps",
       "blocks": {
         "da667e41-200f-4167-8c04-3aa2ccd2af21": {
-          "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
           "settings": {
             "shortcode": "<div class=\"globo-formbuilder\" data-id=\"NTM5Mw==\"><\/div>"
           }
@@ -139,7 +140,6 @@
     },
     "168672414542da65c0": {
       "type": "apps",
-      "disabled": true,
       "blocks": {
         "0ef7549e-161a-4308-9ad8-91832868c2e4": {
           "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/form-block\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
@@ -148,24 +148,24 @@
             "form_settings": false,
             "font_color": "#000000",
             "size": 14,
-            "input_background_color": "#FFF",
-            "input_background_color_focus": "#F4DADA",
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
             "input_border_radius": 1,
             "input_border_color": "#ebe9e9",
-            "input_border_color_focus": "#2D2727",
-            "input_font_color": "#3D3131",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
             "input_size": 14,
             "border_color": "#121212",
             "border_radius": 2,
             "border": 1,
-            "fill_color": "#EBE9E9",
+            "fill_color": "#ebe9e9",
             "padding": 35,
             "form_width": 600,
             "btn_text": "Submit",
-            "sub_btn_txt_color": "#F3F3F3",
-            "sub_btn_bg_color": "#3F3333",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
             "sub_btn_font_size": 14,
-            "sub_btn_bdr_color": "#FFFFFF",
+            "sub_btn_bdr_color": "#ffffff",
             "sub_btn_bdr_rad": 3,
             "sub_btn_bdr_width": 1,
             "fonts": "Times New Roman"
@@ -175,13 +175,13 @@
       "block_order": [
         "0ef7549e-161a-4308-9ad8-91832868c2e4"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
     },
     "8dcaf6c1-acbc-4dac-b157-de6fab2246a7": {
       "type": "roulette-wheel",
-      "disabled": true,
       "settings": {
       }
     }
